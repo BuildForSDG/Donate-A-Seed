@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon-1.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/8786e3a93c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
@@ -27,9 +28,9 @@
                 <li class="nav-item text-white"> <a class="nav-link" href="#" id="faq"><i class="fab fa-facebook"></i></a> </li>
                 <li class="nav-item text-white"> <a class="nav-link" href="#" id="faq"><i class="fab fa-twitter"></i></a> </li>
               <li class="nav-item"><a class="nav-link" href="#"><b>CONTACT US</b></a></li>
-              <li class="nav-item"><a class="nav-link" href="#"><b>SIGN UP AS A FARMER</b></a></li>
+              <li class="nav-item"><a class="nav-link" href="signUpFarmer.html"><b>SIGN UP AS A FARMER</b></a></li>
             </ul>
-            <a class="btn navbar-btn ml-md-2 btn-light text-dark"><b><b>DONATE A SEED</b></b></a>
+            <a href="https://paystack.com/pay/donateaseed" class="btn navbar-btn ml-md-2 btn-light text-dark"><b><b>DONATE A SEED</b></b></a>
           </div>
         </div>
       </nav>
@@ -59,7 +60,7 @@
                     A profound change of the global food and agriculture system is needed if we are to nourish the 821 million people who are hungry today and the additional 2 billion people expected to be undernourished by 2050. <br>
                     Right now, our soils, freshwater, oceans, forests and biodiversity are being rapidly degraded. Climate change is putting even more pressure on the resources we depend on, increasing risks associated with disasters, such as droughts and floods. Many rural women and men can no longer make ends meet on their land, forcing them to migrate to cities in search of opportunities. Poor food security is also causing millions of children to be stunted, or too short for the ages, due to severe malnutrition <a href="https://www.un.org/sustainabledevelopment/hunger/"><span>United Nation</span></a>. Let's help our Farmers by donating a <strong>SEED</strong>.
                 </p>
-              <button class="btn btn-primary btn-lg">Donate Now</button>
+               <a href="https://paystack.com/pay/donateaseed"><button class="btn btn-primary btn-lg"><strong>Donate Now</strong></button></a>
                 </div>
          </div>
      </main>
@@ -86,7 +87,7 @@
           <div >
             <p>WE NEED YOUR HELP</p>
              <h3>LET’S STOP THIS HUNGER AND <br> FULLFILL THEIR HAPPINESS</h3>
-             <button class="btn btn-primary btn-lg">Learn More</button>
+             <a href="https://www.un.org/sustainabledevelopment/hunger/" target="_blank"><button class="btn btn-primary btn-lg">Learn More</button></a>
             </div>     
         </div>
      </main>
@@ -95,7 +96,100 @@
          <P class="m-1">
           REGISTER AS A SEED SUPPLIER
          </P> 
-         <button class="btn btn-success btn-lg m-1">Sign up Now</button>
+       </div>
+       <div class="modal-form p-1">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Sign Up Now</button>
+
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <form class="p-5">
+                <div class="form-row">
+                  <div class="col-md-4 mb-3">
+                    <label for="validationDefault01"><strong>First name</strong></label>
+                    <input type="text" class="form-control" id="validationDefault01" required>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationDefault02"><strong>Last name</strong></label>
+                    <input type="text" class="form-control" id="validationDefault02"  required>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationDefaultUsername"><strong><strong>Phone Number</strong></strong></label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend2">+234</span>
+                      </div>
+                      <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationDefault03"><strong>Address</strong></label>
+                    <input type="text" class="form-control" id="validationDefault03" required>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationDefault04"><strong>State</strong></label>
+                    <select class="custom-select" id="validationDefault04" required>
+                      <option selected disabled value="">Choose...</option>
+                      <option>Abia</option>
+                      <option>Adamawa</option>
+                      <option>Akwa Ibom</option>
+                      <option>Anambra</option>
+                      <option>Bauchi</option>
+                      <option>Bayelsa</option>
+                      <option>Benue</option>
+                      <option>Borno</option>
+                      <option>Cross River</option>
+                      <option>Delta</option>
+                      <option>Ebonyi</option>
+                      <option>Edo</option>
+                      <option>Ekiti</option>
+                      <option>Enugu</option>
+                      <option>FCT Abuja</option>
+                      <option>Gombe</option>
+                      <option>Imo</option>
+                      <option>Jigawa</option>
+                      <option>Kaduna</option>
+                      <option>Kano</option>
+                      <option>Katsina</option>
+                      <option>Kebbi</option>
+                      <option>Kogi</option>
+                      <option>Kwara</option>
+                      <option>Lagos</option>
+                      <option>Nasarawa</option>
+                      <option>Niger</option>
+                      <option>Ogun</option>
+                      <option>Ondo</option>
+                      <option>Osun</option>
+                      <option>Oyo</option>
+                      <option>Plateau</option>
+                      <option>Rivers</option>
+                      <option>Sokoto</option>
+                      <option>Taraba</option>
+                      <option>Yobe</option>
+                      <option>Zamfara</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationDefault05"><strong>LGA</strong></label>
+                    <input type="text" class="form-control" id="validationDefault05" required>
+                  </div>
+                               
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label" for="invalidCheck2">
+                      <strong>Agree to terms and conditions</strong>
+                    </label>
+                  </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit form</button>
+              </form>
+            </div>
+          </div>
+        </div>
        </div>
      </main>
 

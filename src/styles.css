@@ -111,6 +111,18 @@ main .main-container .third {
     font-size: 30px;
 }
 
+.modal-form {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.modal-content {
+    background: url(images/cocoa-seed.jpg) no-repeat center center/cover;
+    color: white;
+}
+
 .footer div {
     /* margin-bottom: 20px; */
     display: flex;
