@@ -9,3 +9,16 @@ background: url('images/farmer-5.jpg') no-repeat center center/cover ;
     width: 100%;
     
 }
+
+@media (max-width: 440px) {
+    body,html {
+        background: none;
+        background-color: #1a9f2b;
+    }
+
+    .container {
+        height: 100%;
+        width: 100%;
+        
+    }
+}

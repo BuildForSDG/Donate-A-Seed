@@ -32,7 +32,7 @@ nav .container-fluid img {
     height: max-content;
     width: 40%;
     padding: 30px;
-    /* text-align: center; */
+    text-align: justify;
     /* border: 1px solid grey; */
 }
 
@@ -93,9 +93,7 @@ main .main-container .third {
     font-size: 90px;
 }
 
-.main-third div p:last-child {
-    /* font-size: 90px; */
-}
+
 
 .main-third div {
     margin-right: 10px;
@@ -134,4 +132,55 @@ main .main-container .third {
     justify-content: space-evenly;
     list-style: none;    
     width: 100%;
+}
+
+@media (max-width: 440px) {
+   body {
+       width: 100%;
+   }
+    .main-container {
+        display: flex;
+    flex-direction: column;
+    width: 100%;
+        margin: 0;
+        /* background-color: red; */
+    }
+
+    .slider {
+        width: 100%;
+    }
+
+    .featured {
+        width: 100%;
+        text-align: justify;
+    }
+
+    .div-flex {
+        display: none;
+        flex-direction: column;
+        padding: 5px;
+        /* background-color: green; */
+    }
+
+    .div-flex div {
+        width: 100%;
+        margin: 3px;
+        background-color: red;
+    }
+
+    .main-third {
+        height: 250px;
+        text-align: center;
+    }
+    .main-third div p:first-child {
+        font-size: 30px;
+    }
+
+    .seed-seller .seller-div {
+        font-size:20px;
+    }
+
+    .footer ul {
+        font-size: 12px;
+    }
 }
