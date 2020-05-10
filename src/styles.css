@@ -19,8 +19,14 @@ nav .container-fluid img {
 }
 
 .slider {
-    /* height: 100px; */
+    
     width: 60%;
+    
+}
+
+.carousel-inner img {
+    height: 700px;
+   
 }
 
 .border-radius {
@@ -166,6 +172,15 @@ main .main-container .third {
         width: 100%;
         margin: 3px;
         background-color: red;
+    }
+
+    .border-line {
+        border: 1px solid white;
+    }
+
+    .carousel-inner img {
+        height: 300px;
+       
     }
 
     .main-third {
