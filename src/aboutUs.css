@@ -1,6 +1,8 @@
-p, li{
-font-size:larger;
+p,
+li {
+  font-size: larger;
 }
-h1{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
