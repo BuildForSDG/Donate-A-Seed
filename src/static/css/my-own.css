@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:200,300,300i,400,400i,500,500i,600,600i,700,800&display=swap');
+
+body {
+    background-size: cover;
+    background-position: center;
+}
+
+
+.card,
+.card-header {
+    font-family: "PT Sans", sans-serif;
+
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-bottom: 20px;
+}
+
+.card {
+    box-shadow: 0 2px 20px 0 rgba(110, 130, 208, .18);
+}
+
+.btn-link {
+    width: 100%;
+    height: 60px;
+    color: #fff !important;
+    font-weight: bold !important;
+    text-align: left !important;
+    text-decoration:  !important;
+}
+
+.card-body {
+    background: #f4f4f4;
+    color: #111;
+    font-size: 15px;
+}
+
+.btn-link::after {
+    content: '\2212';
+    width: 35px;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 5px;
+    right: 15px;
+    top: 11px;
+    position: absolute;
+    background-color: rgb(37, 53, 38);
+}
+
+.btn-link.collapsed::after {
+    content: '\002B'
+}
+
+.btn-link::before {
+    content: '';
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    background: #ecb338;
+    z-index: 1;
+    transform: rotate(45deg);
+    left: 30px;
+    top: 46px;
+}
+
+.card-header {
+    background-color: #ecb338 !important;
+    box-shadow: 0 2px 20px 0 rgba(110, 130, 208, .18);
+
+}
+
+#faq {
+    background-image: url(../images/grass-black.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+#faq h3 {
+    color: #fff;
+    font-weight: 400;
+}
+
+
+#faq .pic {
+    border-radius: 50px;
+    background-color: red;
+}
+
+#contact-us {
+    padding: 5px;
+    background-image: url(../images/body.svg) !important;
+}
+
+#our-causes {
+    font-family: "PT Sans", sans-serif;
+    background-image: url(../images/body.svg) !important;
+}
+
+#our-team {
+    color: #222;
+    background: rgba(0, 0, 0, 0.5);
+    font-family: "PT Sans", sans-serif;
+    padding: 50px;
+    background-image: url(../images/service-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#sponsors {
+    font-family: "PT Sans", sans-serif;
+    background-image: url(../images/body.svg) !important;
+    padding: 5px;
+}
+
+#sponsors h1 {
+    font-weight: 700;
+    color: #ecb338;
+}
+
+#take-action {
+    background-image: url(../images/background-2.jpg);
+    background-size: cover;
+}
+
+#take-below {
+    background-color: rgba(0, 0, 0, 0.51);
+}
+
+
+#register {
+    padding: 10px;
+    background-color: #4b9e55;
+}
+
+#register .container {
+    border-radius: 10px;
+    font-family: "PT Sans", sans-serif;
+    background-image: url(../images/body.svg) !important;
+    background-size: cover;
+}
+
+#register input {
+    border: 1px solid #999;
+    border-radius: 2px;
+    background: #fff;
+}
+
+#register .btn-primary {
+    background-color: #4b9e55 !important;
+    border-radius: 3px;
+    color: #fff;
+    border-color: #4b9e55 !important;
+}
+
+#register .btn:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+#register h3 {
+    margin-bottom: 55px;
+}
