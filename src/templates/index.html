@@ -1,4 +1,4 @@
-{% from "base.html" import render_aboutus, render_ourcauses, render_faq, render_contactus, render_ourteam, render_sponsors, render_subscribenews, render_takeaction, render_footer, render_js, render_css %}
+{% from "base.html" import render_aboutus, render_ourcauses, render_faq, render_contactus, render_ourteam, render_sponsors, render_subscribenews, render_takeaction, render_footer, render_js, render_css, render_donatemodal, render_scrolltotop %}
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -12,7 +12,12 @@
 </head>
 
 <body data-rsssl=1 class="home page-template-default page page-id-5680 _masterslider _msp_version_3.2.7 woocommerce-no-js" style="background-image: url(../static/images/body.svg)">
+    
+    {{ render_donatemodal(render) }}
+
+    
     <div class="body-wrapper float-menu">
+
 
         <header class="greennature-header-wrapper header-style-5-wrapper greennature-header-with-top-bar">
             <!-- top navigation -->
@@ -66,7 +71,7 @@
                     <div class="greennature-logo">
                         <div class="greennature-logo-inner">
                             <a href="index.html">
-                                <img src="{{ url_for('static', filename='images/logo.png')}}" alt="logo" /> </a>
+                                <img src="{{ url_for('static', filename='icons/logo.png')}}" alt="logo" /> </a>
                         </div>
                         <div class="greennature-responsive-navigation dl-menuwrapper" id="greennature-responsive-navigation">
                             <button class="dl-trigger">Open Menu</button>
@@ -91,6 +96,7 @@
                                     </ul>
                                 </li>
 
+                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item donatelink"><a href="donate.html" aria-current="page">Donate Now</a></li>
                             </ul>
                         </div>
                     </div>
@@ -118,8 +124,8 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <a class="greennature-donate-button greennature-lb-payment"><span class="greennature-button-overlay"></span><span class="greennature-button-donate-text">Donate</span></a>
-
+                           <li class="greennature-donate-button"><button type="button" id="modalBtn" class="btn-donate">Donate</button>
+                    </a> 
                         </nav>
                         <div class="greennature-navigation-gimmick" id="greennature-navigation-gimmick"></div>
                         <div class="clear"></div>
@@ -131,7 +137,7 @@
         <!-- is search -->
 
 
-        <!--section1-->
+        <!--slider section1-->
         <section id="content-section-1">
             <div class="greennature-full-size-wrapper gdlr-show-all no-skin" style="padding-bottom: 0px;  background-color: #ffffff; ">
                 <div class="greennature-master-slider-item greennature-slider-item greennature-item" style="margin-bottom: 0px;">
@@ -189,7 +195,7 @@ color: #ecb338;" class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159
             </div>
             <div class="clear"></div>
         </section>
-        <!--section1end-->
+        <!--slider section1end-->
 
         <!--sec2-->
         <section id="content-section-2">
@@ -202,7 +208,7 @@ color: #ecb338;" class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159
                                 <div class="column-service-content-wrapper">
                                     <h3 class="column-service-title">We Have Helped</h3>
                                     <div class="column-service-content greennature-skin-content">
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+                                        <p class="counter">100</p>
                                     </div><a class="column-service-read-more">Farmers in AFRICA</a>
                                 </div>
                             </div>
@@ -210,13 +216,14 @@ color: #ecb338;" class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159
                     </div>
                     <div class="four columns">
                         <div class="greennature-ux column-service-ux">
-                            <div class="greennature-item greennature-column-service-item greennature-type-2-bg" style="margin-bottom: 0px;background-color: #3f3221;">
-                                <div class="column-service-image"><img src="{{ url_for('static', filename='images/donation.png')}}" alt="" width="80" height="80" /></div>
+                            <div class="greennature-item greennature-column-service-item greennature-type-2-bg" style="margin-bottom: 0px; background-color: #3f3221; height: ;">
+                                <div class="column-service-image"><img src="{{ url_for('static', filename='images/donation.png')}}" alt="" width="80" height="80"/></div>
                                 <div class="column-service-content-wrapper">
                                     <h3 class="column-service-title">We Need Your Help</h3>
                                     <div class="column-service-content greennature-skin-content">
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero. Nullam quis risus eget urna mollis ornare vel eu leo. Egestas Dolor Risus.</p>
-                                    </div><a class="column-service-read-more" href="#">Donate Now</a>
+                                        <p>With more than a quarter of a billion people potentially at the brink of starvation, swift action needs to be taken to provide food and humanitarian relief to the most at-risk regions.</p>             
+                                        <br>
+                                    </div><a class="column-service-read-more" href="donate.html" target="_blank">Donate Now</a>
                                 </div>
                             </div>
                         </div>
@@ -228,8 +235,8 @@ color: #ecb338;" class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159
                                 <div class="column-service-content-wrapper">
                                     <h3 class="column-service-title">END HUNGER</h3>
                                     <div class="column-service-content greennature-skin-content">
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-                                    </div><a class="column-service-read-more" href="#">Learn More</a>
+                                        <p>By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round.</p>
+                                    </div><a target="_blank" class="column-service-read-more" href="https://www.un.org/sustainabledevelopment/hunger/">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -252,10 +259,9 @@ background-position: center; ">
                             <div class="action-ads-caption greennature-skin-info">Lets stop this Hunger and fufill their happiness</div>
                             <div class="action-ads-divider" style="background: #facc2e;"></div>
                             <div class="action-ads-content">
-                                <p>A profound change of the global food and agriculture system is needed if we are to nourish the 821 million people who are hungry today and the additional 2 billion people expected to be undernourished by 2050. Poor food security is also causing millions of children to go starved...
-
-                                </p> <br> <br> <br>
-                                <a class="action-ads-button large greennature-button greennature-lb-payment" href="#" style="color: #6d5b1c;background-color: #fec428;">Donate Now</a>
+                               <p>After decades of steady decline, the number of people who suffer from hunger – as measured by the prevalence of undernourishment – began to slowly increase again in 2015. Today, more than 820 million people regularly go to bed hungry, of whom about 135 million suffer from acute hunger largely due to man-made conflicts, climate change and economic downturns. The COVID-19 pandemic could now double that number, putting an additional 130 million people at risk of suffering acute hunger by the end of 2020, according to the World Food Programme...
+                                   <a href="https://www.un.org/sustainabledevelopment/hunger/">Learn More &raquo;</a></p>
+                                <a href="donate.html" class="action-ads-button large greennature-button greennature-lb-payment" style="color: #6d5b1c;background-color: #fec428;">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -266,7 +272,8 @@ background-position: center; ">
                             <div class="action-ads-divider" style="background: #5dc269;"></div>
                             <div class="action-ads-content">
                                 <p>Right now, our soils, freshwater, oceans, forests and biodiversity are being rapidly degraded. Climate change is putting even more pressure on the resources we depend on, increasing risks associated with disasters, such as droughts and floods. Many rural Farmers can no longer make ends meet on their land, forcing them to migrate to cities in search of opportunities.</p>
-                                <a class="action-ads-button large greennature-button" style="color: #ffffff;background-color: #5dc269;" href="#">Learn More!</a>
+                                <br><br>
+                                <a class="action-ads-button large greennature-button" style="color: #ffffff;background-color: #5dc269;" href="https://www.un.org/sustainabledevelopment/hunger/">Learn More!</a>
                             </div>
                         </div>
                     </div>
@@ -285,6 +292,8 @@ background-position: center; ">
 
         {{ render_contactus(render) }}
 
+        {{ render_ourteam(render) }}
+
         {{ render_takeaction(render) }}
 
         {{ render_sponsors(render) }}
@@ -292,6 +301,8 @@ background-position: center; ">
         {{ render_subscribenews(render) }}
 
         {{ render_footer(render) }}
+
+        {{ render_scrolltotop(render) }}
 
         {{ render_js(render) }}
 

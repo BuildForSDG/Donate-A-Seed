@@ -44,6 +44,8 @@ body {
 
 .greennature-navigation-wrapper,
 .greennature-logo-right-text {
+    font-family: "PT Sans", sans-serif;
+
     margin-top: 35px;
 }
 
@@ -924,7 +926,7 @@ textarea:-ms-input-placeholder {
 }
 
 .footer-wrapper * {
-    border-color: #382f24;
+    border: none !important;
 }
 
 .footer-wrapper input[type="text"],

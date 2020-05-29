@@ -51,7 +51,7 @@
             <div class="greennature-logo">
                 <div class="greennature-logo-inner">
                     <a href="index.html">
-                        <img src="{{ url_for('static', filename='images/logo.png')}}" alt="logo" /> </a>
+                        <img src="{{ url_for('static', filename='icons/logo.png')}}" alt="logo" /> </a>
                 </div>
                 <div class="greennature-responsive-navigation dl-menuwrapper" id="greennature-responsive-navigation">
                     <button class="dl-trigger">Open Menu</button>
@@ -64,6 +64,10 @@
                         <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="#contact-us" aria-current="page">Contact Us</a></li>
 
                         <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="#" aria-current="page">Shop</a></li>
+
+                        <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item donatelink"><a href="donate.html" aria-current="page">Donate Now</a></li>
+
+            
                     </ul>
                 </div>
             </div>
@@ -74,14 +78,14 @@
                     <ul id="menu-main-menu-1" class="sf-menu greennature-main-menu">
                         <li class="menu-item menu-item-home current-menu-item greennature-normal-menu"><a href="index.html">Home</a></li>
 
-                        <li class="menu-item menu-item-home  greennature-normal-menu"><a href="#faq">FAQ</a></li>
-
                         <li class="menu-item menu-item-home  greennature-normal-menu"><a href="#contact-us">Contact Us</a></li>
+
+                        <li class="menu-item menu-item-home  greennature-normal-menu"><a href="#faq">FAQ</a></li>
 
                         <li class="menu-item menu-item-home  greennature-normal-menu"><a href="#">Shop*</a></li>
                     </ul>
-                    <a class="greennature-donate-button greennature-lb-payment"><span class="greennature-button-overlay"></span><span class="greennature-button-donate-text">Donate</span></a>
-
+                    <li class="greennature-donate-button"><button type="button" id="modalBtn" class="btn-donate">Donate</button>
+                    </a>                    
                 </nav>
                 <div class="greennature-navigation-gimmick" id="greennature-navigation-gimmick"></div>
                 <div class="clear"></div>
@@ -94,6 +98,8 @@
 {% endmacro %}
 
 {% macro render_css(render) %}
+<link rel="shortcut icon" href="{{ url_for ('static', filename='icons/favicon-1.png')}}">
+
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato%3A100%2C100italic%2C300%2C300italic%2Cregular%2Citalic%2C700%2C700italic%2C900%2C900italic&amp;subset=latin&amp;' type='text/css' media='all' />
 
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Noto+Sans%3Aregular%2Citalic%2C700%2C700italic&amp;subset=greek%2Ccyrillic-ext%2Ccyrillic%2Clatin%2Clatin-ext%2Cvietnamese%2Cgreek-ext&amp;' type='text/css' media='all' />
@@ -132,6 +138,9 @@
 
 <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+
 {% endmacro %}
 
 
@@ -150,8 +159,9 @@
                     </div>
                     <div class="about-us-content-wrapper">
                         <div class="about-us-content greennature-skin-content">
-                            <p>Donate a Seed is a... et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                            <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                            <p>An initiative / Platform led by sgd developers with a goal to seek for seeds
+                                for farmers for plantation in the aim to end zero hunger on the less privileged
+                                ones during this pandemic time and beyond. </p>
                         </div><a class="about-us-read-more greennature-button" href="#contact-us">Learn More &raquo;</a>
                     </div>
                     <div class="clear"></div>
@@ -175,6 +185,7 @@
                 <div class="greennature-item-title-container container">
                     <div class="greennature-item-title-head">
                         <h3 class="greennature-item-title greennature-skin-title greennature-skin-border"><img src="../static/upload/icon-5.png" alt="" width="80" height="80" />Our Causes</h3><a class="greennature-item-title-link" href="#">Learn More</a>
+                        <p>As a customer, member, or donor, you support our mission and our nonprofit work to...</p>
                         <div class="clear"></div>
                     </div>
                 </div>
@@ -189,7 +200,7 @@
                                 <div class="greennature-ux greennature-classic-portfolio-ux">
                                     <div class="portfolio-thumbnail greennature-image"><img src="../static/images/hunger-sad.jpg" alt="" width="540" height="326" /><span class="portfolio-overlay">&nbsp;</span><a class="portfolio-overlay-icon" href="../static/images/hunger-sad.jpg" data-rel="fancybox"></a></div>
                                     <div class="portfolio-classic-content">
-                                        <h3 class="portfolio-title"><a href="#">Zero Hunger</a></h3>
+                                        <h3 class="portfolio-title"><a href="#">Ensure Zero Hunger</a></h3>
 
                                         <div class="portfolio-excerpt">According to this measure, 226.7 million people are starving in Africa. The countries most affected by extreme poverty and hunger in Africa are mainly those located south of the Sahara. One in four people suffers from hunger there – which means that the share of the world's hungry is highest in sub-Saharan Africa.
 
@@ -276,15 +287,14 @@
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
                                     <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Collapsible Group Item #1
-                                    </button>
+                                        Who can participate:                                    </button>
                                 </h2>
                             </div>
 
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
+                                    Everyone, Donate-A-seed is open to anyone who is willing to help donate
+                                    to farmers in combacting hunger.                                 </div>
                             </div>
                         </div>
 
@@ -294,37 +304,17 @@
                             <div class="card-header" id="headingTwo">
                                 <h2 class="mb-0">
                                     <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Collapsible Group Item #2
-                                    </button>
+                                        Why should I participate:                                    </button>
                                 </h2>
                             </div>
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                 <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
+                                    To be part of a community that will reach out to millions of less privileged
+                                    people who needs food at this time and beyond                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Collapsible Group Item #3
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
-
-
-
-
-
-
                 </div>
 
                 <div class="col-md-6 pic">
@@ -361,7 +351,7 @@
                                                             <br>
                                                             <span class="wpcf7-form-control-wrap your-name">
                                                                 <label>Enter Name</label>
-                                                                <input id="name" type="text" name="name" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Name*">
+                                                                <input id="name" type="text" name="name" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Name*" required>
                                                             </span>
                                                         </p>
                                                     </div>
@@ -370,7 +360,7 @@
                                                             <br>
                                                             <span class="wpcf7-form-control-wrap your-email">
                                                                 <label>Enter Email</label>
-                                                                <input id="email" type="text" name="email" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Email*">
+                                                                <input id="email" type="text" name="email" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Email*" required>
                                                             </span>
                                                         </p>
                                                     </div>
@@ -379,7 +369,7 @@
                                                             <br>
                                                             <span class="wpcf7-form-control-wrap your-message">
                                                                 <label>Enter Message</label>
-                                                                <textarea id="message" name="message" cols="40" rows="10" class="input1" aria-invalid="false" placeholder="Message*"></textarea>
+                                                                <textarea id="message" name="message" cols="40" rows="10" class="input1" aria-invalid="false" placeholder="Message*" required></textarea>
                                                             </span>
                                                         </p>
                                                     </div>
@@ -535,20 +525,18 @@
 
 {% macro render_sponsors(render) %}
 <!--sponsors-->
-<section id="sponsors">
-    <div class="text-center mb-3" style="">
+<section id = "sponsors">
+    <div class="text-center mb-3">
         <div class="container border-primary rounded">
             <div class="row p-2">
                 <div class="mx-auto col-md-8">
                     <h1>Special Thanks</h1>
                     <p class="mb-4">This Project was made possible by</p>
-                    <div class="row text-muted">
-                        <div class="col-md-2 col-4 p-2"> <i class="d-block fa fa-github fa-3x text-dark" aria-hidden="true"></i> </div>
-                        <div class="col-md-2 col-4 p-2"> <i class="d-block fa fa-facebook fa-3x text-dark" aria-hidden="true"></i> </div>
-                        <div class="col-md-2 col-4 p-2"> <i class="d-block fa fa-slack fa-3x text-dark" aria-hidden="true"></i> </div>
-                        <div class="col-md-2 col-4 p-2"> <i class="d-block fa fa-paypal fa-3x text-dark" aria-hidden="true"></i> </div>
-                        <div class="col-md-2 col-4 p-2"> <i class="d-block fa fa-rebel fa-3x text-dark" aria-hidden="true"></i> </div>
-                        <div class="col-md-2 col-4 p-2"> <i class="d-block fa fa-first-order fa-3x text-dark" aria-hidden="true"></i> </div>
+                    <div class="row social-media">
+                        <a href="https://www.github.com/"><i class="fa fa-github"></i></a>
+                        <a class="andela" href="https://andela.com/"><i class="andela"></i>Andela</a>
+                        <a href=""><i class="fa fa-slack"></i></a>
+                        <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
                     </div>
                 </div>
             </div>
@@ -569,7 +557,7 @@
                 <div class="greennature-item-title-wrapper greennature-item  greennature-center greennature-large ">
                     <div class="greennature-item-title-container container">
                         <div class="greennature-item-title-head">
-                            <h3 class="greennature-item-title greennature-skin-title greennature-skin-border">Subscribe To Newsletter</h3>
+                            <h3 class="greennature-item-title greennature-skin-title greennature-skin-border">Subscribe To Our Newsletter</h3>
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -613,10 +601,11 @@
                 <div class="greennature-item greennature-stunning-item greennature-stunning-center">
                     <h2 class="stunning-item-title">The only way to make this happened is to take action!</h2>
                     <div class="stunning-item-caption greennature-skin-content">
-                        <p>Lets fight hunger together.</p>
+                        <p>Let's End Hunger Together.</p>
+                    </div> 
+                        <a onclick="location.href='donate.html'" type="button" target="blank" class="stunning-item-button greennature-button large greennature-lb-payment" id="modalBtn" background-color: #ecb338; color: #ffffff;>Donate Now!</a>
+                        <a onclick="location.href='registerfarmer.html'" type="button" target="blank" class="stunning-item-button greennature-button large greennature-lb-payment" id="modalBtn" style="background-color: #ecb338 !important; color: #ffffff;">Register!</a>
                     </div>
-                    <a class="stunning-item-button greennature-button large greennature-lb-payment" href="#" style="background-color: #ecb338; color: #ffffff;">Donate Now!</a>
-                </div>
             </div>
             <div class="clear"></div>
             <div class="clear"></div>
@@ -637,8 +626,8 @@
             <div class="footer-column three columns" id="footer-widget-1">
                 <div id="text-5" class="widget widget_text greennature-item greennature-widget">
                     <div class="textwidget">
-                        <p><img src="upload/logo-light.png" style="width: 170px;" alt=""></p>
-                        <p>We are here for you.......</p>
+                        <p><img src="{{ url_for('static', filename='icons/logo.png')}}" alt="logo" /></p>
+                        <p>We are here for you...</p>
                     </div>
                 </div>
             </div>
@@ -647,7 +636,11 @@
                 <div id="text-9" class="widget widget_text greennature-item greennature-widget">
                     <h3 class="greennature-widget-title">Contact Info</h3>
                     <div class="clear"></div>
-                    <div class="textwidget"><span class="clear"></span><span class="greennature-space" style="margin-top: -6px; display: block;"></span> Address: 123 street area location
+                    <div class="textwidget">
+                        <span class="clear"></span><span class="greennature-space" style="margin-top: 10px; display: block;"></span>
+
+                        <i class="greennature-icon fa fa-map-marker" style="vertical-align: middle; color: #fff; font-size: 16px; "></i> 12 street country location
+
 
                         <span class="clear"></span><span class="greennature-space" style="margin-top: 10px; display: block;"></span>
 
@@ -662,61 +655,48 @@
 
             <div class="footer-column three columns" id="footer-widget-3">
                 <div id="gdlr-recent-post-widget-5" class="widget widget_gdlr-recent-post-widget greennature-item greennature-widget">
-                    <h3 class="greennature-widget-title">Recent Posts</h3>
-                    <div class="clear"></div>
+                    <h3 class="greennature-widget-title">Mapsite</h3>
                     <div class="greennature-recent-post-widget">
                         <div class="recent-post-widget">
-                            <div class="recent-post-widget-thumbnail">
-                                <a href="#"><img src="upload/shutterstock_294481373-150x150.jpg" alt="" width="150" height="150"></a>
-                            </div>
                             <div class="recent-post-widget-content">
-                                <div class="recent-post-widget-title"><a href="#">Sem Porta Mollis Parturi</a></div>
-                                <div class="recent-post-widget-info">
-                                    <div class="blog-info blog-date greennature-skin-info"><i class="fa fa-clock-o"></i><a href="#">21 Mar 2014</a></div>
-                                    <div class="clear"></div>
-                                </div>
+                                <div class="recent-post-widget-title"><a href="index.html">Home</a></div>
                             </div>
-                            <div class="clear"></div>
                         </div>
+
                         <div class="recent-post-widget">
-                            <div class="recent-post-widget-thumbnail">
-                                <a href="#"><img src="upload/shutterstock_181393724-150x150.jpg" alt="" width="150" height="150"></a>
-                            </div>
                             <div class="recent-post-widget-content">
-                                <div class="recent-post-widget-title"><a href="#">Nullam Lorem Mattis Purus</a></div>
-                                <div class="recent-post-widget-info">
-                                    <div class="blog-info blog-date greennature-skin-info"><i class="fa fa-clock-o"></i><a href="#">21 Mar 2014</a></div>
-                                    <div class="clear"></div>
-                                </div>
+                                <div class="recent-post-widget-title"><a href="#about-us">About us</a></div>
                             </div>
-                            <div class="clear"></div>
                         </div>
-                        <div class="clear"></div>
+
+                        <div class="recent-post-widget">
+                            <div class="recent-post-widget-content">
+                                <div class="recent-post-widget-title"><a href="#our-causes">Our Causes</a></div>
+                            </div>
+                        </div>
+
+                        <div class="recent-post-widget">
+                            <div class="recent-post-widget-content">
+                                <div class="recent-post-widget-title"><a href="donate.html">donate</a></div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
             <div class="footer-column three columns" id="footer-widget-4">
                 <div id="gdlr-recent-portfolio2-widget-6" class="widget widget_gdlr-recent-portfolio2-widget greennature-item greennature-widget">
-                    <h3 class="greennature-widget-title">Recent Works</h3>
+                    <h3 class="greennature-widget-title">Resources</h3>
                     <div class="clear"></div>
                     <div class="greennature-recent-port2-widget">
                         <div class="recent-port-widget-thumbnail">
-                            <a href="#"><img src="upload/shutterstock_161515241-150x150.jpg" alt="" width="150" height="150"></a>
+                            <a target=_blank href="https://www.pexels.com/">Photos by Pexels.com</a>
                         </div>
                         <div class="recent-port-widget-thumbnail">
-                            <a href="#"><img src="upload/shutterstock_133689230-150x150.jpg" alt="" width="150" height="150"></a>
+                            <a target=_blank href="https://fontawesome.com/">Icons by Font awesome</a>
                         </div>
                         <div class="recent-port-widget-thumbnail">
-                            <a href="#"><img src="upload/shutterstock_53600221-150x150.jpg" alt="" width="150" height="150"></a>
-                        </div>
-                        <div class="recent-port-widget-thumbnail">
-                            <a href="#"><img src="upload/shutterstock_124871620-150x150.jpg" alt="" width="150" height="150"></a>
-                        </div>
-                        <div class="recent-port-widget-thumbnail">
-                            <a href="#"><img src="upload/shutterstock_281995004-150x150.jpg" alt="" width="150" height="150"></a>
-                        </div>
-                        <div class="recent-port-widget-thumbnail">
-                            <a href="#"><img src="upload/shutterstock_256181956-150x150.jpg" alt="" width="150" height="150"></a>
+                            <a target=_blank href="https://www.templateshub.net">Template</a>
                         </div>
                         <div class="clear"></div>
                     </div>
@@ -731,7 +711,7 @@
                     <a href="#"><i class="greennature-icon fa fa-facebook" style="vertical-align: middle;color: #bbbbbb;font-size: 20px"></i></a> <a href="#"><i class="greennature-icon fa fa-twitter" style="vertical-align: middle;color: #bbbbbb;font-size: 20px"></i></a> <a href="#"><i class="greennature-icon fa fa-dribbble" style="vertical-align: middle;color: #bbbbbb;font-size: 20px"></i></a> <a href="#"><i class="greennature-icon fa fa-pinterest" style="vertical-align: middle;color: #bbbbbb;font-size: 20px"></i></a> <a href="#"><i class="greennature-icon fa fa-google-plus" style="vertical-align: middle;color: #bbbbbb;font-size: 20px"></i></a> <a href="#"><i class="greennature-icon fa fa-instagram" style="vertical-align: middle;color: #bbbbbb;font-size: 20px"></i></a>
                 </div>
                 <div class="copyright-right">
-                    <a target="_blank" href="https://www.templateshub.net">copyright Donate a Seed</a> </div>
+                    <a>&copy Copyright 2020 Donate a Seed - All rights reserved</a></div>
                 <div class="clear"></div>
             </div>
         </div>
@@ -740,13 +720,31 @@
 <!--end-->
 {% endmacro %}
 
+{% macro render_scrolltotop(render) %}
+<!--scroll to top-->
+<button id="btnScrollToTop">
+    <i class="fa fa-arrow-up"></i>
+</button>
+{% endmacro %}
+
 
 
 {% macro render_js(render) %}
 <!--java scripts-->
 
 <!-- JS, Popper.js, and jQuery -->
-
+<!--counter script-->
+<script>
+    jQuery(document).ready(function( $ )
+    {
+        $('.counter').counterUp({
+        delay: 10,
+        time: 1000
+        });
+    });
+</script>
+<script type='text/javascript' src='../static/js/jquery.counterup.min.js'></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script type='text/javascript' src='../static/js/jquery/jquery.js'></script>
@@ -754,9 +752,11 @@
 <script>
     var ms_grabbing_curosr = '../static/plugins/masterslider/public/assets/css/common/grabbing.html',
         ms_grab_curosr = '../static/plugins/masterslider/public/assets/css/common/grab.html';
-
 </script>
+<script type='text/javascript' src='../static/js/scrolltotop.js'></script>
+<script type='text/javascript' src='../static/js/navsec.js'></script>
 <script type='text/javascript' src='../static/plugins/superfish/js/superfish.js'></script>
+<script type='text/javascript' src='../static/js/donate-modal.js'></script>
 <script type='text/javascript' src='../static/js/hoverIntent.min.js'></script>
 <script type='text/javascript' src='../static/plugins/dl-menu/modernizr.custom.js'></script>
 <script type='text/javascript' src='../static/plugins/dl-menu/jquery.dlmenu.js'></script>
@@ -838,20 +838,21 @@
     })(jQuery);
 
 </script>
+
 {% endmacro %}
 
-{% macro render_form(render) %}
-<!--form-->
+{% macro render_formfarmer(render) %}
+<!--form farmer-->
 <section id="register">
     <div class="cotainer p-4">
         <div class="container p-5">
-            <div class="col-md-6">
-                <h3>Are you interested in our program? register Below</h3>
+            <div class="col-md-6 h3r">
+                <h3>Are you interested in our program? Register As A Farmer Below</h3>
             </div>
             <form method="POST" action="{{ url_for('auth.registerfarmer') }}">
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="firstname">First Name</label>
+                        <label for="firstnamefarmer">First Name</label>
                         <input name="firstname" type="text" class="form-control" id="firstname" required>
                     </div>
                     <div class="form-group col-md-6">
@@ -868,7 +869,7 @@
                     </small>
                 </div>
 
-                <div class="form-row">
+                <!--div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="username">Username</label>
                         <input name="username" type="text" class="form-control" id="username" required>
@@ -882,12 +883,158 @@
                             Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
                         </small>
                     </div>
-                </div>
+                </div-->
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="address">Address</label>
-                        <input name="address" type="text" class="form-control" id="address" required>
+                        <input name="address" type="" class="form-control" id="address" required>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="state">State</label>
+                        <select name="state" id="state" class="form-control" required>
+                            <option selected>Choose...</option>
+                            <option>Abia</option>
+                            <option>Adamawa</option>
+                            <option>Akwa Ibom</option>
+                            <option>Anambra</option>
+                            <option>Bauchi</option>
+                            <option>Bayelsa</option>
+                            <option>Benue</option>
+                            <option>Borno</option>
+                            <option>Cross River</option>
+                            <option>Delta</option>
+                            <option>Ebonyi</option>
+                            <option>Edo</option>
+                            <option>Ekiti</option>
+                            <option>Enugu</option>
+                            <option>FCT Abuja</option>
+                            <option>Gombe</option>
+                            <option>Imo</option>
+                            <option>Jigawa</option>
+                            <option>Kaduna</option>
+                            <option>Kano</option>
+                            <option>Katsina</option>
+                            <option>Kebbi</option>
+                            <option>Kogi</option>
+                            <option>Kwara</option>
+                            <option>Lagos</option>
+                            <option>Nasarawa</option>
+                            <option>Niger</option>
+                            <option>Ogun</option>
+                            <option>Ondo</option>
+                            <option>Osun</option>
+                            <option>Oyo</option>
+                            <option>Plateau</option>
+                            <option>Rivers</option>
+                            <option>Sokoto</option>
+                            <option>Taraba</option>
+                            <option>Yobe</option>
+                            <option>Zamfara</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="lga">LGA</label>
+                        <input name="lga" type="text" class="form-control" id="lga" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="address">Phone Number</label>
+                        <input name="phone" type="number" class="form-control" id="phone">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="bvn">BVN</label>
+                        <input name="bvn" type="number" class="form-control" id="bvn">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="upload">Upload Image</label>
+                        <input type="file" class="form-control-file" id="upload">
+                    </div>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="agree">
+                        <label class="form-check-label" for="agree">
+                            Agree to our terms and conditions
+                        </label>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <button type="submit" class="btn btn-primary">Submit Application</button>
+                    </div>
+                      <div class="col-md-6">
+                          <br>
+                      </div>
+                      <div class="col-md-6">
+                          <p class="not-a">Not a Farmer? sign up as a <a href="registerseed.html">Seed Deliverer</a> instead</p>
+                      </div>
+                    </div>
+                </div>            
+            </form>
+        </div>
+    </div>
+</section>
+<!--end form-->
+{% endmacro %}
+
+{% macro render_formseed(render) %}
+<!--form farmer-->
+<section id="register">
+    <div class="cotainer p-4">
+        <div class="container p-5">
+            <div class="col-md-6 h3r">
+                <h3>Are you interested in our program? Register As A Seed Deliverer Below</h3>
+            </div>
+            <form method="POST" action="{{ url_for('auth.registerseed') }}">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="firstnamefarmer">First Name</label>
+                        <input name="firstname" type="text" class="form-control" id="firstname" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="lastname">Last Name</label>
+                        <input name="lastname" type="text" class="form-control" id="lastname" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input name="email" type="email" class="form-control" id="email" required>
+                    <small id="emailhelp" class="form-text text-muted">
+                        We will never share your Email...
+                    </small>
+                </div>
+
+                <!--div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="username">Username</label>
+                        <input name="username" type="text" class="form-control" id="username" required>
+                    </div>
+
+                    <div class="form-group col-md-6">
+
+                        <label for="password">Password</label>
+                        <input name="password" type="password" id="password" class="form-control" aria-describedby="passwordHelpBlock">
+                        <small id="passwordHelpBlock" class="form-text text-muted">
+                            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                        </small>
+                    </div>
+                </div-->
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="address">Address</label>
+                        <input name="address" type="" class="form-control" id="address" required>
                     </div>
 
                     <div class="form-group col-md-3">
@@ -949,7 +1096,7 @@
 
                     <div class="form-group col-md-3">
                         <label for="bvn">BVN</label>
-                        <input name="bvn" type="number" class="form-control" id="bvn" required>
+                        <input name="bvn" type="number" class="form-control" id="bvn">
                     </div>
 
                     <div class="form-group col-md-3">
@@ -967,10 +1114,99 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit Application</button>
+
+                <div class="container">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <button type="submit" class="btn btn-primary">Submit Application</button>
+                    </div>
+                      <div class="col-md-6">
+                          <br>
+                      </div>
+                      <div class="col-md-6">
+                          <p class="not-a">Not a Seed Deliverer? sign up as a <a href="registerfarmer.html">Farmer instead</a></p>
+                      </div>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
 </section>
 <!--end form-->
 {% endmacro %}
+
+{% macro render_donatemodal(render) %}
+<!--donate popup-->
+<section id="donate-popup">
+    <div id="simpleModal" class="modal1">
+        <div class="modal1-content">
+            <div class="modal-header">
+                <h3>Your Help Means A Lot To Us.</h3>
+                <span class="closeBtn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="cotainer p-4">
+                    <div class="container p-1">
+                        <form method="POST" action="">
+                            <div class="form-group">
+                                <label for="donate-amount"><b>How much would you like to donate?</b></label>
+                                <div class="container">
+                                    <div class="form-row">
+                                        <div class="btn-group btn-group-toggle col-md-6 mb-3" data-toggle="buttons">
+                                            <label class="btn btn-primary col-md-6 mb-3">
+                                              <input type="radio" name="options" id="option1"> #1000
+                                            </label>
+                                            <label class="btn btn-primary col-md-6 mb-3">
+                                              <input type="radio" name="options" id="option2"> #50,000
+                                            </label>
+                                            
+                                          </div>
+                                    </div>
+                                </div>
+                                <input type="number" class="form-control" id="donate-amount" placeholder="amount in (Naira)" required>
+                              </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="firstnamefarmer">First Name*</label>
+                                    <input name="firstname" type="text" class="form-control" id="firstname" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="lastname">Last Name*</label>
+                                    <input name="lastname" type="text" class="form-control" id="lastname" required>
+                                </div>
+                            </div>
+            
+                            <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="email">Email Address*</label>
+                                <input name="email" type="email" class="form-control" id="email" required>
+                                <small id="emailhelp" class="form-text text-muted">
+                                    We will never share your Email...
+                                </small>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="address">Phone Number</label>
+                                <input name="phone" type="number" class="form-control" id="phone">
+                            </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Additional Notes</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="note: this will appear on our home page"></textarea>
+                              </div>
+            
+    
+                            <button type="submit" class="btn btn-primary">Donate Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</section>
+<!--end popup-->
+{% endmacro%}

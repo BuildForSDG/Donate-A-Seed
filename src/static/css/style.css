@@ -311,9 +311,9 @@ a img.aligncenter {
     padding: 0 4px 5px;
 }
 
-.sticky {}
+/***.sticky {}
 
-.bypostauthor {}
+.bypostauthor {}**/
 
 dl {
     width: 100%;
@@ -915,6 +915,8 @@ html .woocommerce .greennature-widget-title {
 }
 
 .greennature-navigation-wrapper {
+    font-family: "PT Sans", sans-serif;
+
     margin: 0px 15px;
     float: right;
 }
@@ -925,6 +927,8 @@ html .woocommerce .greennature-widget-title {
 }
 
 .greennature-navigation-wrapper .greennature-main-menu > li {
+    font-family: "PT Sans", sans-serif;
+
     padding: 0px;
 }
 
@@ -1035,6 +1039,7 @@ html .woocommerce .greennature-widget-title {
 }
 
 .greennature-header-wrapper.header-style-5-wrapper {
+    font-family: "PT Sans", sans-serif;
     position: absolute;
     left: 0px;
     right: 0px;
@@ -1878,6 +1883,7 @@ input[type="submit"] {
     margin-left: 0px;
     margin-right: 0px;
     padding: 47px 30px 45px;
+    height: 385px !important;
 }
 
 .greennature-column-service-item.greennature-type-2-bg .column-service-icon {
@@ -5158,10 +5164,9 @@ body.single .greennature-blog-full {
 
 /*--- recent post widget ---*/
 .recent-post-widget {
-    margin-bottom: 15px;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    padding-bottom: 15px;
+    margin-bottom: 2px;
+    border-bottom-width: 0px;
+    padding-bottom: 2px;
 }
 
 .recent-post-widget .recent-post-widget-thumbnail {
@@ -5298,7 +5303,7 @@ ul.greennature-twitter-widget li {
     border-bottom-style: solid;
 }
 
-ul.greennature-twitter-widget li:before {
+/**ul.greennature-twitter-widget li:before {
     font-size: 19px;
     line-height: 24px;
     float: left;
@@ -5307,7 +5312,7 @@ ul.greennature-twitter-widget li:before {
     font-family: FontAwesome;
     content: '\f099';
     *zoom: expression(this.runtimeStyle['zoom']='1', this.innerHTML='&#xf099;');
-}
+}**/
 
 ul.greennature-twitter-widget li .greennature-twitter {
     margin-bottom: 20px;

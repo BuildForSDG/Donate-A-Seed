@@ -1,34 +1,22 @@
-{% from "base.html" import render_scrolltotop, render_aboutus, render_ourcauses, render_faq, render_contactus, render_ourteam, render_sponsors, render_subscribenews, render_takeaction, render_footer, render_js, render_formseed, render_navbar, render_css, render_donatemodal %}
-
+{% from "base.html" import render_aboutus, render_ourcauses, render_faq, render_contactus, render_ourteam, render_sponsors, render_subscribenews, render_takeaction, render_footer, render_js, render_form, render_navbar, render_css, render_donatemodal %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1.0" />
 
-    {% if title %}
-    <title>Register as a - {{ title }}</title>
-    {% else %}
-    <title>Register as a Seed Deliverer</title>
-    {% endif %}
+    <title>Donate</title>
 
     {{ render_css(render) }}
-
 </head>
 
-<body data-rsssl=1 class="home page-template-default page page-id-5680 _masterslider _msp_version_3.2.7 woocommerce-no-js">
-
+<body class="donate">
     <div class="body-wrapper  float-menu">
 
         {{ render_navbar(render) }}
 
         {{ render_donatemodal(render) }}
-
-        {{ render_scrolltotop(render) }}
-
-
-
 
         <div class="content-wrapper">
             <div class="greennature-content">
@@ -57,8 +45,6 @@
                         </div>
                         <div class="clear"></div>
                     </section>
-                    {{ render_formseed(render) }}
-
                 </div>
                 <!-- Below Sidebar Section-->
             </div>
@@ -68,18 +54,10 @@
         <!-- content wrapper -->
     </div>
 
-
-    {{ render_contactus(render) }}
-
-    {{ render_faq(render) }}
-
     {{ render_subscribenews(render) }}
 
     {{ render_footer(render) }}
 
     {{ render_js(render) }}
-
-
 </body>
-
 </html>

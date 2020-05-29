@@ -91,3 +91,15 @@ $(document).ready(function($) {
 
 
 });
+
+/*section script*/
+
+$('#menu-main-menu-1').onePageNav({
+	currentClass: 'current-menu-item',
+	changeHash: false,
+	scrollSpeed: 750,
+	scrollThreshold: 0.5,
+	filter: '',
+	easing: 'swing'
+
+});
