@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:200,300,300i,400,400i,500,500i,600,600i,700,800&display=swap');
+
+body {
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+.card,
+.card-header {
+    font-family: "PT Sans", sans-serif;
+
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-bottom: 20px;
+}
+
+.card {
+    box-shadow: 0 2px 20px 0 rgba(110, 130, 208, .18);
+}
+
+.btn-link {
+    width: 100%;
+    height: 60px;
+    color: #fff !important;
+    font-weight: bold !important;
+    text-align: left !important;
+    text-decoration: none !important;
+}
+
+.card-body {
+    background: #f4f4f4;
+    color: #111;
+    font-size: 15px;
+}
+
+.btn-link::after {
+    content: '\2212';
+    width: 35px;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 5px;
+    right: 15px;
+    top: 11px;
+    position: absolute;
+    background-color: rgb(37, 53, 38);
+}
+
+.btn-link.collapsed::after {
+    content: '\002B'
+}
+
+.btn-link::before {
+    content: '';
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    background: #ecb338;
+    z-index: 1;
+    transform: rotate(45deg);
+    left: 30px;
+    top: 46px;
+}
+
+.card-header {
+    background-color: #ecb338 !important;
+    box-shadow: 0 2px 20px 0 rgba(110, 130, 208, .18);
+
+}
+
+#faq {
+    background-image: url(../images/grass-black.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+#faq h3 {
+    color: #fff;
+    font-weight: 400;
+}
+
+
+#faq .pic {
+    border-radius: 50px;
+    background-color: red;
+}
+
+#contact-us {
+    padding: 5px;
+    background-image: url(../images/body.svg) !important;
+}
+
+#our-causes {
+    font-family: "PT Sans", sans-serif;
+    background-image: url(../images/body.svg) !important;
+}
+
+#our-team {
+    color: #222;
+    background: rgba(0, 0, 0, 0.5);
+    font-family: "PT Sans", sans-serif;
+    padding: 50px;
+    background-image: url(../images/service-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#sponsors {
+    font-family: "PT Sans", sans-serif;
+    background-image: url(../images/body.svg) !important;
+    padding: 5px;
+}
+
+#sponsors h1 {
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #4b9e55;
+}
+
+.social-media{
+    display: flex;
+    justify-content: center;
+}
+
+#sponsors a{
+    display: flex;
+    height: 75px;
+    width: 75px;
+    margin: 0 15px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,0.7);
+    transition: transform 0.5s;
+}
+
+#sponsors a:hover{
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                -0.5px -0.5px 0px rgba(255,255,255,1),
+                -0.5px -0.5px 0px rgba(0,0,0,0.15),
+                0px 12px 10px -10px rgba(0,0,0,0.05);
+
+    border: 1px solid rgba(0,0,0,0.01);
+    transform: translateY(2px);
+
+}
+
+#sponsors a:hover i{
+    transform: scale(0.90);
+}
+
+#sponsors a i{
+    font-size: 35px;
+    color: #777;
+    transition: transform 0.5s;
+}
+
+#sponsors a:hover .fa-facebook{
+    color: #3b5998;
+}
+
+#sponsors a:hover .fa-github{
+    color: #a000fd;
+}
+
+#sponsors a:hover .fa-slack{
+    color: #ff9100;
+}
+
+#sponsors .andela {
+    font-weight: 600 !important;
+    color: #555 !important;
+    font-size: 20px !important;
+}
+
+#sponsors a:hover .andela{
+    color: #0051ff;
+}
+
+#take-action {
+    background-image: url(../images/background-2.jpg);
+    background-size: cover;
+}
+
+#take-below {
+    background-color: rgba(0, 0, 0, 0.51);
+}
+
+
+#register {
+    padding: 10px;
+    background-color: #4b9e55;
+}
+
+#register .container {
+    border-radius: 10px;
+    font-family: "PT Sans", sans-serif;
+    background-image: url(../images/body.svg) !important;
+    background-size: cover;
+}
+
+#register input, #donate-popup input {
+    border: 1px solid #999;
+    border-radius: 2px;
+    background: #fff;
+}
+
+#register .btn-primary .btn-primary, #donate-popup .btn-primary {
+    background-color: #4b9e55 !important;
+    border-radius: 3px;
+    color: #fff;
+    border-color: #4b9e55 !important;
+}
+
+#register .btn:focus,
+.btn:active, #donate-popup .btn:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+#register h3 {
+    margin-bottom: 55px;
+}
+
+.btn-donate {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000;
+    background-color: #ecb338;
+	width: 100px;
+	display: block;
+	position: absolute;
+	top: 0px;
+    bottom: 0px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+	border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-color: #967b40;
+}
+
+.btn-donate:hover{
+    background-color: #ce9825;
+    border-color: #ecb338;
+    transition: .5s;
+}
+
+#donate-popup .btn-primary{
+    margin-bottom: 10px;
+    margin-left: 17px;
+}
+
+.modal1{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal1-content{
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),
+    0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name:modalopen;
+    animation-duration: .7s;
+}
+
+.closeBtn{
+    color: #fff;
+    float: right;
+    font-size: 30px;
+}
+
+.closeBtn:hover,.closeBtn:focus{
+    color: #ecb338;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes modalopen{
+    from{ opacity:0 }
+    to{ opacity:1 }
+}
+
+.modal-header{
+    border-radius: 0px !important;
+    background: #4b9e55;
+    padding: 15px;
+    color: #fff;
+}
+.modal-header h3 , .modal-footer h3{
+    color: #fff;
+    margin: 0;
+}
+
+.modal-body{
+    padding: 10px 20px;
+}
+
+.modal-footer{
+    border-radius: 0px !important;
+    background: #4b9e55;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+.btn-primary{
+    border: none !important;
+    background: #4b9355;
+    color: #fff;
+    margin: 20px 9px 0px;
+    font-size: 13px;
+    padding: 17px 36px;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+.h3r{
+    display: contents;
+}
+
+.not-a{
+padding-top: 20px;
+font-weight: 555;
+text-decoration: none;
+}
+
+.btn-primary:hover{
+    background: #316b37;
+    color: #fff;
+    border: none !important;
+}
+
+.greennature-skin-dark-skin .greennature-button2{
+    background: #ecb338;
+    color: #fff;
+    margin: 20px 9px 0px;
+    font-size: 13px;
+    padding: 17px 36px;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+.greennature-skin-dark-skin .greennature-button2:hover{
+    background: #ecb338;
+    color: #fff;
+
+}
+
+#btnScrollToTop{
+    align-content: center;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #4b9e55;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+#btnScrollToTop:active{
+    background: #245329;
+}
+
+.msp-cn-1-7{
+    left:290px !important;
+    top: 498px;
+}
+
+@media only screen and (max-width: 700px) {
+    .ms-btn-container, .msp-cn-1-3, .msp-cn-1-2, .msp-cn-1-1, .msp-cn-1-5, .msp-cn-1-9{
+        left: 10px !important;
+    }
+
+    .donatelink{
+        background-color: #ff9100 !important;
+    }
+    
+    .modal1-content {
+        background-color: #f4f4f4;
+        margin: 20px;
+        width: 90%;
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+        animation-name: modalopen;
+        animation-duration: .7s;
+    }
+
+    .modal-body {
+        padding: 0px;
+    }
+
+
+    .msp-cn-1-7{
+        left: 115px !important;
+        top: 149.822px;
+    }
+
+    .greennature-skin-brown-column-service{
+        background-color: #2d2418;
+        border-top: 5px solid #3f3221;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        margin-top: -1px !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+
+    .greennature-column-service-item.greennature-type-2 {
+        text-align: center !important;
+        padding: 30px 1px 30px 1px !important;}
+
+    .greennature-action-ads-item {
+        padding: 10px 20px 17px !important;
+    }
+
+    body .container {
+        max-width: 330px !important;
+        }
+
+    .six.columns {
+        padding-top: 10px !important;
+    }
+
+    .p-5 {
+        padding: 1rem !important;
+    }
+
+    #our-team{
+        padding: 5px !important;
+    }
+
+    .greennature-personnel-item.plain-style .personnel-author-image {
+        margin-top: 10px !important;
+    }
+
+    .container.p-4{
+        padding: 0px !important;
+    }
+
+    .h3r h3{
+        font-size: 25px !important;
+        text-align: center !important;
+        font-weight: 600 !important;
+        text-transform: capitalize !important;
+    }
+
+    #register .container {
+        border-radius: 2px;
+    }
+
+    #register .p-4{
+        padding: 2px !important;
+    }
+
+    #greennature-parallax-wrapper-1{
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+}
+
+.donatelink{
+    background-color: #ff9100 !important;
+}
+
+.greennature-skin-brown-column-service{
+    background-color: #2d2418;
+    border-top: 5px solid #3f3221;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: -60px;
+}
+
+.column-service-content .counter{
+    font-family: "PT Sans", sans-serif;
+    font-size: 80px;
+    font-weight: 600;
+}
+
+#footer {
+    font-family: "PT Sans", sans-serif;
+}
+
+.footer-wrapper a{
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+
+
+

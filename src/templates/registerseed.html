@@ -1,0 +1,85 @@
+{% from "base.html" import render_scrolltotop, render_aboutus, render_ourcauses, render_faq, render_contactus, render_ourteam, render_sponsors, render_subscribenews, render_takeaction, render_footer, render_js, render_formseed, render_navbar, render_css, render_donatemodal %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0" />
+
+    {% if title %}
+    <title>Register as a - {{ title }}</title>
+    {% else %}
+    <title>Register as a Seed Deliverer</title>
+    {% endif %}
+
+    {{ render_css(render) }}
+
+</head>
+
+<body data-rsssl=1 class="home page-template-default page page-id-5680 _masterslider _msp_version_3.2.7 woocommerce-no-js">
+
+    <div class="body-wrapper  float-menu">
+
+        {{ render_navbar(render) }}
+
+        {{ render_donatemodal(render) }}
+
+        {{ render_scrolltotop(render) }}
+
+
+
+
+        <div class="content-wrapper">
+            <div class="greennature-content">
+
+                <!-- Above Sidebar Section-->
+
+                <!-- Sidebar With Content Section-->
+                <div class="with-sidebar-wrapper">
+                    <section id="content-section-1">
+                        <div class="greennature-parallax-wrapper greennature-background-image gdlr-show-all greennature-skin-dark-skin" id="greennature-parallax-wrapper-1" data-bgspeed="0" style="background-image: url({{ url_for('static', filename='images/farmer-5.jpg')}}); background-size: cover; background-position: center; padding-top: 260px; padding-bottom: 140px; ">
+                            <div class="container">
+                                <div class="greennature-title-item">
+                                    <div class="greennature-item-title-wrapper greennature-item  greennature-center greennature-extra-large ">
+                                        <div class="greennature-item-title-container container">
+                                            <div class="greennature-item-title-head">
+                                                <h3 class="greennature-item-title greennature-skin-title greennature-skin-border">REGISTER</h3>
+                                                <div class="greennature-item-title-caption greennature-skin-info">As a SEED DELIVERER</div>
+                                                <div class="clear"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+                    {{ render_formseed(render) }}
+
+                </div>
+                <!-- Below Sidebar Section-->
+            </div>
+            <!-- greennature-content -->
+            <div class="clear"></div>
+        </div>
+        <!-- content wrapper -->
+    </div>
+
+
+    {{ render_contactus(render) }}
+
+    {{ render_faq(render) }}
+
+    {{ render_subscribenews(render) }}
+
+    {{ render_footer(render) }}
+
+    {{ render_js(render) }}
+
+
+</body>
+
+</html>

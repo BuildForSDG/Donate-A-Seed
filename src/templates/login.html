@@ -1,0 +1,35 @@
+<html>
+<body>
+                         <section id="asfarmer">
+                        <div class="cotainer p-4">
+                            <div class="container p-5">
+                                <header>DEMO PAGE</header>
+                                <h1>u got here bcuz u created an account</h1>
+                                <form method="POST" action="{{ url_for('auth.login') }}">
+
+                                        <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="username">Username</label>
+                                        <input name="username" type="text" class="form-control" id="username" required>
+                                    </div>
+
+                                            <div class="form-group col-md-6">
+
+                                                <label for="password">Password</label>
+<input name="password" type="password" id="password" class="form-control" aria-describedby="passwordHelpBlock">
+                                            </div>
+                                        </div>
+
+                                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                                </form>
+                                <h3>if you get redirected to home page it means u entered the correct details</h3>
+                            </div>
+                        </div>
+                    </section>
+</body>
+
+
+
+
+
+</html>

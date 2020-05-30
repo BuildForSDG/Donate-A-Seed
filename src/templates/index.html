@@ -1,0 +1,311 @@
+{% from "base.html" import render_aboutus, render_ourcauses, render_faq, render_contactus, render_ourteam, render_sponsors, render_subscribenews, render_takeaction, render_footer, render_js, render_css, render_donatemodal, render_scrolltotop %}
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0" />
+
+    <title>Donate A Seed</title>
+
+    {{ render_css(render) }}
+</head>
+
+<body data-rsssl=1 class="home page-template-default page page-id-5680 _masterslider _msp_version_3.2.7 woocommerce-no-js" style="background-image: url(../static/images/body.svg)">
+    
+    {{ render_donatemodal(render) }}
+
+    
+    <div class="body-wrapper float-menu">
+
+
+        <header class="greennature-header-wrapper header-style-5-wrapper greennature-header-with-top-bar">
+            <!-- top navigation -->
+            <div class="top-navigation-wrapper">
+                <div class="top-navigation-container container">
+                    <div class="top-navigation-left">
+                        <div class="top-navigation-left-text">
+                            Phone : +1800-222-3333      Email : donateaseedoffcial@gmail.com </div>
+                    </div>
+                    <div class="top-navigation-right">
+                        <div class="top-social-wrapper">
+                            <div class="social-icon">
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-facebook"></i></a>
+                            </div>
+                            <div class="social-icon">
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-flickr"></i></a>
+                            </div>
+                            <div class="social-icon">
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-linkedin"></i></a>
+                            </div>
+                            <div class="social-icon">
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-pinterest-p"></i></a>
+                            </div>
+                            <div class="social-icon">
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-tumblr"></i></a>
+                            </div>
+                            <div class="social-icon">
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-twitter"></i></a>
+                            </div>
+                            <div class="social-icon">
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-vimeo"></i></a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div id="greennature-header-substitute"></div>
+            <div class="greennature-header-inner header-inner-header-style-5">
+                <div class="greennature-header-container container">
+                    <div class="greennature-header-inner-overlay"></div>
+                    <!-- logo -->
+                    <div class="greennature-logo">
+                        <div class="greennature-logo-inner">
+                            <a href="index.html">
+                                <img src="{{ url_for('static', filename='icons/logo.png')}}" alt="logo" /> </a>
+                        </div>
+                        <div class="greennature-responsive-navigation dl-menuwrapper" id="greennature-responsive-navigation">
+                            <button class="dl-trigger">Open Menu</button>
+                            <ul id="menu-main-menu" class="dl-menu greennature-main-mobile-menu">
+
+                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="index.html" aria-current="page">Home</a></li>
+
+                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="index.html" aria-current="page">About Us</a></li>
+
+                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="index.html" aria-current="page">Causes</a></li>
+
+                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="index.html" aria-current="page">FAQ</a></li>
+
+                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="index.html" aria-current="page">Contact Us</a></li>
+
+                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="index.html" aria-current="page">Shop</a></li>
+
+                                <li ss="menu-item menu-item-has-children menu-item-"><a href="#">Register</a>
+                                    <ul class="dl-submenu">
+                                        <li class="menu-item"><a href="registerfarmer.html">As a Farmer</a></li>
+                                        <li class="menu-item"><a href="registerseed.html">As a Seed Deliverer</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item donatelink"><a href="donate.html" aria-current="page">Donate Now</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- navigation -->
+                    <div class="greennature-navigation-wrapper">
+                        <nav class="greennature-navigation" id="greennature-main-navigation">
+                            <ul id="menu-main-menu-1" class="sf-menu greennature-main-menu">
+                                <li class="menu-item menu-item-home current-menu-item greennature-normal-menu"><a href="index.html">Home</a></li>
+
+                                <li class="menu-item menu-item-home  greennature-normal-menu"><a href="#about-us">About Us</a></li>
+
+                                <li class="menu-item menu-item-home  greennature-normal-menu"><a href="#our-causes">Causes</a></li>
+
+                                <li class="menu-item menu-item-home  greennature-normal-menu"><a href="#faq">FAQ</a></li>
+
+                                <li class="menu-item menu-item-home  greennature-normal-menu"><a href="#contact-us">Contact Us</a></li>
+
+                                <li class="menu-item menu-item-home  greennature-normal-menu"><a href="index.html">Shop*</a></li>
+
+                                <li class="menu-item menu-item-has-children greennature-normal-menu"><a href="#" class="sf-with-ul-pre">Register</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="registerfarmer.html">As a Farmer</a></li>
+                                        <li class="menu-item"><a href="registerseed.html">As a Seed Deliverer</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                           <li class="greennature-donate-button"><button type="button" id="modalBtn" class="btn-donate">Donate</button>
+                    </a> 
+                        </nav>
+                        <div class="greennature-navigation-gimmick" id="greennature-navigation-gimmick"></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </header>
+        <!-- is search -->
+
+
+        <!--slider section1-->
+        <section id="content-section-1">
+            <div class="greennature-full-size-wrapper gdlr-show-all no-skin" style="padding-bottom: 0px;  background-color: #ffffff; ">
+                <div class="greennature-master-slider-item greennature-slider-item greennature-item" style="margin-bottom: 0px;">
+                    <!-- MasterSlider -->
+                    <div id="P_slider_1" class="master-slider-parent ms-parent-id-1">
+
+                        <!-- MasterSlider Main -->
+                        <div id="slider_1" class="master-slider ms-skin-default">
+
+                            <div class="ms-slide" data-delay="7" data-fill-mode="fill">
+                                <img src="{{ url_for('static', filename='plugins/masterslider/public/assets/css/blank.gif')}}" alt="" title="" data-src="{{ url_for('static', filename='images/background-final.jpg')}}" />
+
+                                <a href="#" target="_self" class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159" data-effect="t(true,n,n,-500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="400" data-delay="987" data-ease="easeOutQuint" data-type="button" data-offset-x="1" data-offset-y="208" data-origin="ml" data-position="normal">Learn More</a>
+
+                                <div class="ms-layer  msp-cn-1-3" style="color: rgb(87, 187, 93);" data-effect="t(true,150,n,n,n,n,n,n,n,n,n,n,n,n,n)" data-duration="437" data-delay="625" data-ease="easeOutQuint" data-offset-x="0" data-offset-y="105" data-origin="ml" data-position="normal">
+                                    HUNGER</div>
+
+                                <div class="ms-layer  msp-cn-1-2" style="" data-effect="t(true,150,n,n,n,n,n,n,n,n,n,n,n,n,n)" data-duration="425" data-delay="325" data-ease="easeOutQuint" data-offset-x="0" data-offset-y="-5" data-origin="ml" data-position="normal">
+                                    TO END</div>
+
+                                <div class="ms-layer  msp-cn-1-1" style="font-weight: 300; color: #ecb338; " data-effect="t(true,150,n,n,n,n,n,n,n,n,n,n,n,n,n)" data-duration="350" data-ease="easeOutQuint" data-offset-x="0" data-offset-y="-100" data-origin="ml" data-position="normal">
+                                    JOIN THE MOVEMENT</div>
+
+                            </div>
+
+                            <div class="ms-slide" data-delay="7" data-fill-mode="fill">
+                                <img src="{{ url_for('static', filename='plugins/masterslider/public/assets/css/blank.gif')}}" alt="" title="" data-src="{{ url_for('static', filename='images/farmer-brown.jpg')}}" />
+
+                                <a href="#" target="_self" style="background-color: rgb(37, 53, 38);
+color: #ecb338;" class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159" data-effect="t(true,n,n,-500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="400" data-delay="987" data-ease="easeOutQuint" data-type="button" data-offset-x="1" data-offset-y="227" data-origin="ml" data-position="normal">Learn More</a>
+
+                                <div class="ms-layer  msp-cn-1-9" style="" data-effect="t(true,150,n,n,n,n,n,n,n,n,n,n,n,n,n)" data-duration="437" data-delay="625" data-ease="easeOutQuint" data-offset-x="0" data-offset-y="139" data-origin="ml" data-position="normal">
+                                    To Help</div>
+                                <div class="ms-layer  msp-cn-1-7" style="left: 283px; color: #ecb338;" data-effect="t(true,150,n,n,n,n,n,n,n,n,n,n,n,n,n)" data-duration="437" data-delay="625" data-ease="easeOutQuint" data-offset-x="383" data-offset-y="139" data-origin="ml" data-position="normal">
+                                    OUR FARMERS</div>
+                                <div class="ms-layer  msp-cn-1-5" style="color: white;" data-effect="t(true,150,n,n,n,n,n,n,n,n,n,n,n,n,n)" data-duration="350" data-ease="easeOutQuint" data-offset-x="0" data-offset-y="52" data-origin="ml" data-position="normal">
+                                    Let's Work Together</div>
+                            </div>
+                            <div class="ms-slide" data-delay="7" data-fill-mode="fill">
+                                <img src="{{ url_for('static', filename='plugins/masterslider/public/assets/css/blank.gif')}}" alt="" title="" data-src="{{ url_for('static', filename='images/dem-look.jpg')}}" />
+
+                                <div class="ms-layer  msp-cn-1-10" style="" data-effect="t(true,n,n,-500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="425" data-delay="425" data-ease="easeOutQuint" data-offset-x="0" data-offset-y="82" data-origin="mc" data-position="normal">
+                                    According to this measure, 226.7 million people are starving in Africa. The countries most affected by extreme poverty and hunger in Africa are mainly those located south of the Sahara. One in four people suffers from hunger there – which means that the share of the world's hungry is highest in sub-Saharan Africa.</div>
+
+                                <div class="ms-layer  msp-cn-1-13" style="" data-effect="t(true,n,n,500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="437" data-ease="easeOutQuint" data-offset-x="0" data-offset-y="-15" data-origin="mc" data-position="normal">
+                                    Make This World</div>
+                            </div>
+                        </div>
+                        <!-- END MasterSlider Main -->
+                    </div>
+                    <!-- END MasterSlider -->
+                </div>
+                <div class="clear"></div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </section>
+        <!--slider section1end-->
+
+        <!--sec2-->
+        <section id="content-section-2">
+            <div class="greennature-color-wrapper  gdlr-show-all greennature-skin-brown-column-service" style="background-color: #2d2418;  border-top: 5px solid #3f3221; padding-top: 0px; padding-bottom: 0px; padding-left: ;margin-left: 50px;margin-right: 50px;margin-top: -60px;">
+                <div class="container">
+                    <div class="four columns">
+                        <div class="greennature-ux column-service-ux">
+                            <div class="greennature-item greennature-column-service-item greennature-type-2" style="margin-bottom: 0px;">
+                                <div class="column-service-image"><img src="{{ url_for('static', filename='images/hand.png')}}" alt="" width="80" height="80" /></div>
+                                <div class="column-service-content-wrapper">
+                                    <h3 class="column-service-title">We Have Helped</h3>
+                                    <div class="column-service-content greennature-skin-content">
+                                        <p class="counter">100</p>
+                                    </div><a class="column-service-read-more">Farmers in AFRICA</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="four columns">
+                        <div class="greennature-ux column-service-ux">
+                            <div class="greennature-item greennature-column-service-item greennature-type-2-bg" style="margin-bottom: 0px; background-color: #3f3221; height: ;">
+                                <div class="column-service-image"><img src="{{ url_for('static', filename='images/donation.png')}}" alt="" width="80" height="80"/></div>
+                                <div class="column-service-content-wrapper">
+                                    <h3 class="column-service-title">We Need Your Help</h3>
+                                    <div class="column-service-content greennature-skin-content">
+                                        <p>With more than a quarter of a billion people potentially at the brink of starvation, swift action needs to be taken to provide food and humanitarian relief to the most at-risk regions.</p>             
+                                        <br>
+                                    </div><a class="column-service-read-more" href="donate.html" target="_blank">Donate Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="four columns">
+                        <div class="greennature-ux column-service-ux">
+                            <div class="greennature-item greennature-column-service-item greennature-type-2" style="margin-bottom: 0px;">
+                                <div class="column-service-image"><img src="{{ url_for('static', filename='images/heart.png')}}" alt="" width="80" height="80" /></div>
+                                <div class="column-service-content-wrapper">
+                                    <h3 class="column-service-title">END HUNGER</h3>
+                                    <div class="column-service-content greennature-skin-content">
+                                        <p>By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round.</p>
+                                    </div><a target="_blank" class="column-service-read-more" href="https://www.un.org/sustainabledevelopment/hunger/">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </section>
+        <!--end-->
+
+        <!--sec3-->
+        <section id="content-section-3">
+            <div class="greennature-parallax-wrapper greennature-background-image gdlr-show-all no-skin" id="greennature-parallax-wrapper-1" data-bgspeed="0.11" style="background-image: url('../static/images/shutterstock_147266159-1024x605.jpg'); padding-top: 90px; padding-bottom: 65px; background-position: center; background-size: cover;">
+                <div class="container">
+                    <div class="six columns">
+                        <div class="greennature-item greennature-action-ads-item" style="background: url('../static/images/sad-boy.jpg'); background-size: cover;
+background-position: center; ">
+                            <h3 class="action-ads-title" style="color: #facc2e;">Make Donation</h3>
+                            <div class="action-ads-caption greennature-skin-info">Lets stop this Hunger and fufill their happiness</div>
+                            <div class="action-ads-divider" style="background: #facc2e;"></div>
+                            <div class="action-ads-content">
+                               <p>After decades of steady decline, the number of people who suffer from hunger – as measured by the prevalence of undernourishment – began to slowly increase again in 2015. Today, more than 820 million people regularly go to bed hungry, of whom about 135 million suffer from acute hunger largely due to man-made conflicts, climate change and economic downturns. The COVID-19 pandemic could now double that number, putting an additional 130 million people at risk of suffering acute hunger by the end of 2020, according to the World Food Programme...
+                                   <a href="https://www.un.org/sustainabledevelopment/hunger/">Learn More &raquo;</a></p>
+                                <a href="donate.html" class="action-ads-button large greennature-button greennature-lb-payment" style="color: #6d5b1c;background-color: #fec428;">Donate Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="six columns">
+                        <div class="greennature-item greennature-action-ads-item" style="background: url('../static/images/ground.jpg'); background-color: rgba(0, 0, 0, 0.5); background-position: center; background-size: cover;">
+                            <h3 class="action-ads-title" style="color: #5dc269;">Lets Help Our Beloved Farmers!</h3>
+                            <div class="action-ads-caption greennature-skin-info">Your help really matters</div>
+                            <div class="action-ads-divider" style="background: #5dc269;"></div>
+                            <div class="action-ads-content">
+                                <p>Right now, our soils, freshwater, oceans, forests and biodiversity are being rapidly degraded. Climate change is putting even more pressure on the resources we depend on, increasing risks associated with disasters, such as droughts and floods. Many rural Farmers can no longer make ends meet on their land, forcing them to migrate to cities in search of opportunities.</p>
+                                <br><br>
+                                <a class="action-ads-button large greennature-button" style="color: #ffffff;background-color: #5dc269;" href="https://www.un.org/sustainabledevelopment/hunger/">Learn More!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </section>
+        <!--end-->
+
+        {{ render_aboutus(render) }}
+
+        {{ render_ourcauses(render) }}
+
+        {{ render_faq(render) }}
+
+        {{ render_contactus(render) }}
+
+        {{ render_ourteam(render) }}
+
+        {{ render_takeaction(render) }}
+
+        {{ render_sponsors(render) }}
+
+        {{ render_subscribenews(render) }}
+
+        {{ render_footer(render) }}
+
+        {{ render_scrolltotop(render) }}
+
+        {{ render_js(render) }}
+
+</body>
+
+</html>
