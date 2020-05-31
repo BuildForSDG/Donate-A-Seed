@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for, Flask
+from flask import Blueprint, render_template, request, redirect, url_for, Flask, flash
 from flask_login import login_user, logout_user
 from werkzeug.security import check_password_hash
 from flask_mail import Mail
@@ -13,8 +13,6 @@ auth = Blueprint('auth', __name__)
 #function for register as farmer
 @auth.route('/registerfarmer.html', methods=['GET', 'POST'])
 def registerfarmer():
-
-
     if request.method == 'POST':
         firstname = request.form['firstname']
         lastname = request.form['lastname']
@@ -67,7 +65,12 @@ def registerfarmer():
             smtp.login("donateaseedoffcial@gmail.com", "donateaseed1234")
             smtp.send_message(msg)
 
+        flash(f"Hi {firstname},an email has been sent to {email}, Thanks for choosing us" ,'success')
+
+
         return redirect(url_for('auth.registerfarmer'))
+
+
 
     return render_template('registerfarmer.html')
 
@@ -126,8 +129,7 @@ def registerseed():
             smtp.login("donateaseedoffcial@gmail.com", "donateaseed1234")
             smtp.send_message(msg)
 
-        db.session.add(user)
-        db.session.commit()
+        flash(f"Hi {firstname}, An Email has been sent to {email}, Thanks for choosing us" ,'success')
 
         return redirect(url_for('auth.registerseed'))
 

@@ -8,8 +8,8 @@ from .extensions import db
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     #username = db.Column(db.String(75))
-    firstname = db.Column(db.String(75))
-    lastname = db.Column(db.String(75))
+    firstname = db.Column(db.String(30))
+    lastname = db.Column(db.String(30))
     #password = db.Column(db.String(190))
     email = db.Column(db.String(75))
     address = db.Column(db.String(75))

@@ -1,4 +1,5 @@
 {% from "base.html" import render_scrolltotop, render_aboutus, render_ourcauses, render_faq, render_contactus, render_ourteam, render_sponsors, render_subscribenews, render_takeaction, render_footer, render_js, render_formfarmer, render_formseed, render_navbar, render_css, render_donatemodal %}
+
 <!DOCTYPE html>
 <html>
 
@@ -13,16 +14,14 @@
     {% endif %}
 
     {{ render_css(render) }}
-
-
 </head>
+
+
 
 <body data-rsssl=1 class="home page-template-default page page-id-5680 _masterslider _msp_version_3.2.7 woocommerce-no-js">
 
     <div class="body-wrapper  float-menu">
         {{ render_navbar(render) }}
-
-        {{ render_donatemodal(render) }}
 
 
 
@@ -53,7 +52,20 @@
                         </div>
                         <div class="clear"></div>
                     </section>
+
+
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="alert alert-{{ category }}">
+                                    {{ message }}
+                                </div>        
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                    
                     {{ render_formfarmer(render) }}
+
 
                 </div>
                 <!-- Below Sidebar Section-->
