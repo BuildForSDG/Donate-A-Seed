@@ -17,4 +17,6 @@ def index():
 def donate():
     return render_template('donate.html')
 
-
+@main.route('/shop.html')
+def shop():
+    return render_template('shop.html')

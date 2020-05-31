@@ -515,5 +515,44 @@ text-decoration: none;
 }
 
 
+#shop header{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/act-bg.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
 
+#shop .hero{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    font-family: "PT Sans", sans-serif;
+
+}
+
+#shop h1{
+    font-size: 60px;
+    letter-spacing: 15px;
+    color: #fff;
+}
+
+#shop hr{
+    width: 50%;
+    margin: 30px auto;
+    border: 1.5px solid #fff;
+}
+
+#shop p{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#launch{
+    font-size: 40px;
+    word-spacing: 20px;
+}
 
