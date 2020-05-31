@@ -243,6 +243,7 @@ h6 {
 
 #greennature-responsive-navigation.dl-menuwrapper button {
     background-color: #0c0c0c;
+    border-radius: 4px;
 }
 
 #greennature-responsive-navigation.dl-menuwrapper button:hover,

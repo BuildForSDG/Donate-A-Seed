@@ -5,13 +5,22 @@ body {
     background-position: center;
 }
 
+input {
+    /**background: #fff !important;**/
+    font-family: "PT Sans", sans-serif;
+    border-radius: 0px !important;
+}
 
+.form-control::placeholder {
+    font-family: "PT Sans", sans-serif !important;
+	color: #6c757d;
+	opacity: 1;
+}
 
 
 .card,
 .card-header {
     font-family: "PT Sans", sans-serif;
-
     background-color: transparent !important;
     border: none !important;
     padding: 0 !important;
@@ -475,21 +484,21 @@ text-decoration: none;
         border-radius: 2px;
     }
 
-    #register .p-4{
+    #register .p-4 {
         padding: 2px !important;
     }
 
-    #greennature-parallax-wrapper-1{
+    #greennature-parallax-wrapper-1 {
         padding-top: 50px !important;
         padding-bottom: 50px !important;
     }
 }
 
-.donatelink{
+.donatelink {
     background-color: #ff9100 !important;
 }
 
-.greennature-skin-brown-column-service{
+.greennature-skin-brown-column-service {
     background-color: #2d2418;
     border-top: 5px solid #3f3221;
     padding-top: 0px;
@@ -499,7 +508,7 @@ text-decoration: none;
     margin-top: -60px;
 }
 
-.column-service-content .counter{
+.column-service-content .counter {
     font-family: "PT Sans", sans-serif;
     font-size: 80px;
     font-weight: 600;
@@ -509,13 +518,13 @@ text-decoration: none;
     font-family: "PT Sans", sans-serif;
 }
 
-.footer-wrapper a{
+.footer-wrapper a {
     font-weight: normal;
     text-transform: capitalize;
 }
 
 
-#shop header{
+#shop header {
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/act-bg.jpg);
     height: 100vh;
     background-position: center;
@@ -523,7 +532,7 @@ text-decoration: none;
     color: #fff;
 }
 
-#shop .hero{
+#shop .hero {
     top: 50%;
     left: 50%;
     position: absolute;
@@ -534,25 +543,67 @@ text-decoration: none;
 
 }
 
-#shop h1{
+#shop h1 {
     font-size: 60px;
     letter-spacing: 15px;
     color: #fff;
 }
 
-#shop hr{
+#shop hr {
     width: 50%;
     margin: 30px auto;
     border: 1.5px solid #fff;
 }
 
-#shop p{
+#shop p {
     font-size: 20px;
     margin-bottom: 30px;
 }
 
-#launch{
+#launch {
     font-size: 40px;
     word-spacing: 20px;
 }
+
+.donate-body .navbar-dark {
+    font-family: "PT Sans", sans-serif;
+    background-color: #4b9e55;
+}
+
+.navbar-nav {
+    font-family: "PT Sans", sans-serif;
+    background: #ecb338;
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 2px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.donate-form {
+    font-family: "PT Sans", sans-serif;
+    background: #fff;
+}
+
+#donate {
+    background: #fff;
+    font-family: "PT Sans", sans-serif !important;
+}
+
+#donate input {
+    background: #f4f4f4 !important;
+    border: 1px solid #ced4da !important;
+}
+
+.personnel-author-image img {
+	width: 220px !important;
+	height: 220px !important;
+	align-items: center;
+	display: flex;
+	margin-left: 40px;
+	border: 1px solid #ced4da;
+	padding: 2px;
+	border-radius: 5px;
+}
+
 

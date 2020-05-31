@@ -11,16 +11,130 @@
     {{ render_css(render) }}
 </head>
 
-<body class="donate">
-    <div class="body-wrapper  float-menu">
+<body class="donate-body">
 
-        {{ render_navbar(render) }}
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand">DONATE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+              <a class="nav-item nav-link active" href="index.html">Home</a>
+              <a class="nav-item nav-link active" href="#contact-us">Contact Us</a>
 
-        <h1>DONATE PAGE</h1>
+              <li class="nav-item dropdown dropleft">
+                <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Register
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="registerfarmer.html">As a Farmer</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="registerseed.html">As a Seed Deliverer</a>
+                </div>
+              </li>             
+            </div>
+          </div>
+      </nav>
 
-    </div>
+    <section id="donate">
+                        <!-- Sidebar With Content Section-->
+                        <div class="with-sidebar-wrapper pb-5">
+                            <section id="content-section-1">
+                                <div class="greennature-parallax-wrapper greennature-background-image gdlr-show-all greennature-skin-dark-skin" id="greennature-parallax-wrapper-1" data-bgspeed="0" style="background-image: url({{ url_for('static', filename='images/help.jpg')}}); background-size: cover; background-position: center; padding-top: 260px; padding-bottom: 140px; ">
+                                    <div class="container">
+                                        <div class="greennature-title-item">
+                                            <div class="greennature-item-title-wrapper greennature-item  greennature-center greennature-extra-large ">
+                                                <div class="greennature-item-title-container container">
+                                                    <div class="greennature-item-title-head">
+                                                        <h3 class="greennature-item-title greennature-skin-title greennature-skin-border">DONATION</h3>
+                                                        <div class="greennature-item-title-caption greennature-skin-info">your DONATIONS and PARTICIPATIONS means a lot to us...</div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </section>
+        
+                        </div>
+                        <!-- Below Sidebar Section-->
 
-    {{ render_subscribenews(render) }}
+        <div class="container p-3 donate-form">
+            <form method="POST" class="form-donate">
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <br>
+                        <h3>You are donating to Donate A Seed</h3>
+                        <p>Your help means a lot to us...</p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h5>How much would like to Donate</h5>
+
+                        <div class="col pb-2">
+                          <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline1">#1000</label>
+                          </div>
+
+                          <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline2">#20,000</label>
+                          </div>
+
+                          <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline3">#100,000</label>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="amount">or other amount</label>
+                            <input type="number" class="form-control" id="amount" placeholder="Amount in NAIRA">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="firstname">Firstname*</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="lastname">Lastname</label>
+                        <input type="text" class="form-control" id="lastname">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="email">Email*</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="phone">Phone</label>
+                        <input type="number" class="form-control" id="phone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="addtext">Additional notes</label>
+                    <textarea class="form-control" id="addtext" rows="3" placeholder="note: this will be displayed on our home page!"></textarea>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                      <button type="submit" class="stunning-item-button greennature-button large greennature-lb-payment">Donate Now</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    {{ render_contactus(render) }}
 
     {{ render_footer(render) }}
 

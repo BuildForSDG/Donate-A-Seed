@@ -53,6 +53,7 @@
                     <a href="index.html">
                         <img src="{{ url_for('static', filename='icons/logo.png')}}" alt="logo" /> </a>
                 </div>
+        
                 <div class="greennature-responsive-navigation dl-menuwrapper" id="greennature-responsive-navigation">
                     <button class="dl-trigger">Open Menu</button>
                     <ul id="menu-main-menu" class="dl-menu greennature-main-mobile-menu">
@@ -66,8 +67,6 @@
                         <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="shop.html" aria-current="page">Shop</a></li>
 
                         <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item donatelink"><a href="donate.html" aria-current="page">Donate Now</a></li>
-
-
                     </ul>
                 </div>
             </div>
@@ -84,7 +83,7 @@
 
                         <li class="menu-item menu-item-home  greennature-normal-menu"><a href="shop.html">Shop*</a></li>
                     </ul>
-                    <li class="greennature-donate-button"><button type="button" id="modalBtn" class="btn-donate">Donate</button>
+                    <li href="donate.html" class="greennature-donate-button"><button onclick="location.href='donate.html'" type="button" id="modalBtn" class="btn-donate">Donate</button>
 
                 </nav>
                 <div class="greennature-navigation-gimmick" id="greennature-navigation-gimmick"></div>
@@ -452,15 +451,13 @@
                     <div class="greennature-item greennature-personnel-item greennature-left plain-style">
                         <div class="greennature-ux greennature-personnel-ux">
                             <div class="personnel-item">
-                                <div class="personnel-author-image greennature-skin-border"><img src="../static/upload/personnel-1.jpg" alt="" width="500" height="297" /></div>
+                                <div class="personnel-author-image greennature-skin-border"><img src="../static/images/person.png" alt="" width="500" height="297" /></div>
                                 <div class="personnel-info">
-                                    <div class="personnel-author greennature-skin-title">Jennifer Smith</div>
-                                    <div class="personnel-position greennature-skin-info">Founder</div>
+                                    <div class="personnel-author greennature-skin-title">Malik Mukhtar</div>
+                                    <div class="personnel-position greennature-skin-info">Frontend Developer | Javascript</div>
                                 </div>
                                 <div class="personnel-content greennature-skin-content">
-                                    <p>Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.</p>
-                                </div>
-                                <div class="personnel-social"><a href="http://facebook.com/" target="_self"><i class="greennature-icon fa fa-facebook" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://twitter.com/" target="_self"><i class="greennature-icon fa fa-twitter" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://linkedin.com/" target="_self"><i class="greennature-icon fa fa-linkedin" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://vimeo.com/" target="_self"><i class="greennature-icon fa fa-vimeo" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://pinterest.com/" target="_self"><i class="greennature-icon fa fa-pinterest" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a></div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -469,15 +466,13 @@
                     <div class="greennature-item greennature-personnel-item greennature-left plain-style">
                         <div class="greennature-ux greennature-personnel-ux">
                             <div class="personnel-item">
-                                <div class="personnel-author-image greennature-skin-border"><img src="../static/upload/personnel-3.jpg" alt="" width="500" height="297" /></div>
+                                <div class="personnel-author-image greennature-skin-border"><img src="../static/images/person.png" alt="" width="500" height="297" /></div>
                                 <div class="personnel-info">
-                                    <div class="personnel-author greennature-skin-title">John Doe</div>
-                                    <div class="personnel-position greennature-skin-info">General Manager</div>
+                                    <div class="personnel-author greennature-skin-title">Olugbenga Akeredolu</div>
+                                    <div class="personnel-position greennature-skin-info">Python | Frontend/Backend Developer</div>
                                 </div>
                                 <div class="personnel-content greennature-skin-content">
-                                    <p>Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.</p>
                                 </div>
-                                <div class="personnel-social"><a href="http://facebook.com/" target="_self"><i class="greennature-icon fa fa-facebook" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://twitter.com/" target="_self"><i class="greennature-icon fa fa-twitter" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://linkedin.com/" target="_self"><i class="greennature-icon fa fa-linkedin" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://vimeo.com/" target="_self"><i class="greennature-icon fa fa-vimeo" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://pinterest.com/" target="_self"><i class="greennature-icon fa fa-pinterest" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a></div>
                             </div>
                         </div>
                     </div>
@@ -486,15 +481,13 @@
                     <div class="greennature-item greennature-personnel-item greennature-left plain-style">
                         <div class="greennature-ux greennature-personnel-ux">
                             <div class="personnel-item">
-                                <div class="personnel-author-image greennature-skin-border"><img src="../static/upload/personnel-2.jpg" alt="" width="500" height="297" /></div>
+                                <div class="personnel-author-image greennature-skin-border"><img src="../static/images/person.png" alt="" width="500" height="297" /></div>
                                 <div class="personnel-info">
-                                    <div class="personnel-author greennature-skin-title">Amely Chan</div>
-                                    <div class="personnel-position greennature-skin-info">Human Relation</div>
+                                    <div class="personnel-author greennature-skin-title">Abimbola Olawale Victor</div>
+                                    <div class="personnel-position greennature-skin-info">Statistician | Data Analyst | Data Scientist</div>
                                 </div>
                                 <div class="personnel-content greennature-skin-content">
-                                    <p>Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.</p>
                                 </div>
-                                <div class="personnel-social"><a href="http://facebook.com/" target="_self"><i class="greennature-icon fa fa-facebook" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://twitter.com/" target="_self"><i class="greennature-icon fa fa-twitter" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://linkedin.com/" target="_self"><i class="greennature-icon fa fa-linkedin" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://vimeo.com/" target="_self"><i class="greennature-icon fa fa-vimeo" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://pinterest.com/" target="_self"><i class="greennature-icon fa fa-pinterest" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a></div>
                             </div>
                         </div>
                     </div>
@@ -504,8 +497,13 @@
                     <div class="greennature-item greennature-personnel-item greennature-left plain-style">
                         <div class="greennature-ux greennature-personnel-ux">
                             <div class="personnel-item">
-                                <div class="personnel-author-image greennature-skin-border"></div>
-                                <div class="personnel-info"></div>
+                                <div class="personnel-author-image greennature-skin-border"><img src="../static/images/person.png" alt="" width="500" height="297" /></div>
+                                <div class="personnel-info">
+                                    <div class="personnel-author greennature-skin-title">Kamaldeen Suleiman</div>
+                                    <div class="personnel-position greennature-skin-info">Frontend Developer</div>
+                                </div>
+                                <div class="personnel-content greennature-skin-content">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -757,7 +755,6 @@
 <script type='text/javascript' src='../static/js/scrolltotop.js'></script>
 <script type='text/javascript' src='../static/js/navsec.js'></script>
 <script type='text/javascript' src='../static/plugins/superfish/js/superfish.js'></script>
-<script type='text/javascript' src='../static/js/donate-modal.js'></script>
 <script type='text/javascript' src='../static/js/hoverIntent.min.js'></script>
 <script type='text/javascript' src='../static/plugins/dl-menu/modernizr.custom.js'></script>
 <script type='text/javascript' src='../static/plugins/dl-menu/jquery.dlmenu.js'></script>
@@ -953,10 +950,10 @@
                         <input name="bvn" type="number" class="form-control" id="bvn">
                     </div>
 
-                    <div class="form-group col-md-3">
-                        <label for="upload">Upload Image</label>
-                        <input type="file" class="form-control-file" id="upload">
-                    </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Upload Image</label>
+                      </div>
                 </div>
 
                 <div class="form-group col-md-3">
@@ -1100,10 +1097,10 @@
                         <input name="bvn" type="number" class="form-control" id="bvn">
                     </div>
 
-                    <div class="form-group col-md-3">
-                        <label for="upload">Upload Image</label>
-                        <input type="file" class="form-control-file" id="upload">
-                    </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Upload Image</label>
+                      </div>
                 </div>
 
                 <div class="form-group col-md-3">
