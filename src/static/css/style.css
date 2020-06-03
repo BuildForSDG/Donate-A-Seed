@@ -1064,8 +1064,9 @@ html .woocommerce .greennature-widget-title {
 .greennature-parallax-wrapper {
     overflow: hidden;
     background-position: center 0px;
-    background-repeat: repeat;
     position: relative;
+    background-attachment: fixed;
+
 }
 
 /*--- sidebar ---*/

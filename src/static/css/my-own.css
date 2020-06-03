@@ -5,6 +5,7 @@ body {
     background-position: center;
 }
 
+
 input {
     /**background: #fff !important;**/
     font-family: "PT Sans", sans-serif;
@@ -108,20 +109,12 @@ input {
     background-image: url(../images/body.svg) !important;
 }
 
-#our-team {
-    color: #222;
-    background: rgba(0, 0, 0, 0.5);
-    font-family: "PT Sans", sans-serif;
-    padding: 50px;
-    background-image: url(../images/service-bg.jpg);
-    background-position: center;
-    background-size: cover;
-}
+
 
 #sponsors {
     font-family: "PT Sans", sans-serif;
-    background-image: url(../images/body.svg) !important;
     padding: 5px;
+    background: #e3edf7;
 }
 
 #sponsors h1 {
@@ -138,6 +131,7 @@ input {
 }
 
 #sponsors a{
+    background-attachment: fixed;
     display: flex;
     height: 75px;
     width: 75px;
@@ -411,6 +405,19 @@ text-decoration: none;
     .donatelink{
         background-color: #ff9100 !important;
     }
+
+    #faq .col {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    #faq .p-2 {
+        padding: 0rem !important;
+    }
+
+    #faq .container{
+        padding-bottom: 10px !important;
+    }
     
     .modal1-content {
         background-color: #f4f4f4;
@@ -611,6 +618,63 @@ text-decoration: none;
     margin-top: 1rem !important;
     margin-right: 1rem !important;
     margin-left: 1rem !important;
+}
+
+
+
+#our-team {
+    color: #222;
+    font-family: "PT Sans", sans-serif;
+    background: rgba(0, 0, 0, 0.5);
+    background-image: url('../images/leaves.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
+  }
+
+
+  .team-tag{
+      height: 100%;
+  }
+
+  #our-team ul, ol, i {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+  
+  #our-team .social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+  }
+  
+  #our-team .social-link:hover,
+  #our-team .social-link:focus {
+    background: #ddd;
+    text-decoration: none;
+    color: #555;
+  }
+  #our-team .rounded {
+    border-radius: 50%;
+  }
+
+#faq h4,h1{
+    color: #fff;
+}
+  
+#our-team h1 {
+    color: rgb(61, 61, 61);
 }
 
 
