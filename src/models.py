@@ -3,6 +3,7 @@ from werkzeug.security import generate_password_hash
 from .extensions import db
 
 
+
 # this is the model for the database
 
 # register model
@@ -19,8 +20,10 @@ class User(UserMixin, db.Model):
     phone = db.Column(db.Numeric, unique=True, nullable=True)
     bvn = db.Column(db.Numeric, nullable=True)
     usertype = db.Column(db.String, nullable=False, unique=False)
-    donated_amount = db.relationship('Donated', foreign_keys='Donated.donated_by_id',
-                                     backref='donator', lazy=True)
+    donated_amount = db.relationship('Donated', 
+                                    foreign_keys='Donated.donated_by_email',
+                                     backref='donator', 
+                                     lazy=True)
 
     @property
     def unhashed_password(self):
@@ -35,4 +38,7 @@ class User(UserMixin, db.Model):
 class Donated(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     donate_amount = db.Column(db.Numeric)
+    donator_username = db.Column(db.String(50), unique=False, nullable=True)
+    donator_name = db.Column(db.String(100), unique=False, nullable=False)
+    donated_by_email = db.Column(db.String(75), db.ForeignKey('user.email'),nullable=False, unique=False)
     donated_by_id = db.Column(db.Integer, db.ForeignKey('user.id'))
