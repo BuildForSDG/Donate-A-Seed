@@ -13,7 +13,6 @@
 
 <body data-rsssl=1 class="home page-template-default page page-id-5680 _masterslider _msp_version_3.2.7 woocommerce-no-js" style="background-image: url(../static/images/body.svg)">
 
-    {{ render_donatemodal(render) }}
 
 
     <div class="body-wrapper float-menu">
@@ -89,14 +88,21 @@
 
                                 <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="shop.html" aria-current="page">Shop</a></li>
 
-                                <li ss="menu-item menu-item-has-children menu-item-"><a href="#">Register</a>
+                                {% if current_user.is_authenticated %}
+                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="{{ url_for('auth.logout') }}" aria-current="page">Logout</a></li>
+                                {% endif %}
+                            
+
+                                {% if not current_user.is_authenticated %}
+                                <li ss="menu-item menu-item-has-children menu-item-"><a>Account</a>
                                     <ul class="dl-submenu">
-                                        <li class="menu-item"><a href="registerfarmer.html">As a Farmer</a></li>
-                                        <li class="menu-item"><a href="registerseed.html">As a Seed Deliverer</a></li>
+                                        <li class="menu-item"><a href="login.html">Login</a></li>
+                                        <li class="menu-item"><a href="register.html">Register</a></li>
                                     </ul>
                                 </li>
+                                {% endif %}
 
-                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item donatelink"><a href="https://paystack.com/pay/donateaseed" aria-current="page">Donate Now</a></li>
+                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item donatelink"><a href="donate.html" aria-current="page">Donate Now</a></li>
                             </ul>
                         </div>
                     </div>
@@ -111,20 +117,24 @@
 
                                 <li class="menu-item menu-item-home  greennature-normal-menu"><a href="#our-causes">Causes</a></li>
 
-                                <li class="menu-item menu-item-home  greennature-normal-menu"><a href="#faq">FAQ</a></li>
-
                                 <li class="menu-item menu-item-home  greennature-normal-menu"><a href="#contact-us">Contact Us</a></li>
 
-                                <li class="menu-item menu-item-home  greennature-normal-menu"><a href="shop.html">Shop*</a></li>
+                                <li class="menu-item menu-item-home  greennature-normal-menu"><a href="shop.html">Shop</a></li>
 
-                                <li class="menu-item menu-item-has-children greennature-normal-menu"><a href="#" class="sf-with-ul-pre">Register</a>
+                                {% if current_user.is_authenticated %}
+                                <li class="menu-item menu-item-home  greennature-normal-menu"><a href="logout.html">Logout</a></li>
+                                {% endif %}
+
+                                {% if not current_user.is_authenticated %}
+                                <li class="menu-item menu-item-has-children greennature-normal-menu"><a class="sf-with-ul-pre">Account</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item"><a href="registerfarmer.html">As a Farmer</a></li>
-                                        <li class="menu-item"><a href="registerseed.html">As a Seed Deliverer</a></li>
+                                        <li class="menu-item"><a href="login.html">Login</a></li>
+                                        <li class="menu-item"><a href="register.html">Register</a></li>
                                     </ul>
                                 </li>
+                                {% endif %}
                             </ul>
-                            <li href="https://paystack.com/pay/donateaseed" class="greennature-donate-button"><button onclick="location.href='https://paystack.com/pay/donateaseed'" type="button" id="modalBtn" class="btn-donate">Donate</button>
+                            <li href="donate.html" class="greennature-donate-button"><button onclick="location.href='donate.html'" type="button" id="modalBtn" class="btn-donate">Donate</button>
                         </nav>
                         <div class="greennature-navigation-gimmick" id="greennature-navigation-gimmick"></div>
                         <div class="clear"></div>
@@ -222,7 +232,7 @@ color: #ecb338;" class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159
                                     <div class="column-service-content greennature-skin-content">
                                         <p>With more than a quarter of a billion people potentially at the brink of starvation, swift action needs to be taken to provide food and humanitarian relief to the most at-risk regions.</p>
                                         <br>
-                                    </div><a class="column-service-read-more" href="https://paystack.com/pay/donateaseed" target="_blank">Donate Now</a>
+                                    </div><a class="column-service-read-more" href="donate.html" target="_blank">Donate Now</a>
                                 </div>
                             </div>
                         </div>
@@ -247,6 +257,8 @@ color: #ecb338;" class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159
         </section>
         <!--end-->
 
+        {{ render_aboutus(render) }}
+
         <!--sec3-->
         <section id="content-section-3">
             <div class="greennature-parallax-wrapper greennature-background-image gdlr-show-all no-skin" id="greennature-parallax-wrapper-1" data-bgspeed="0.11" style="background-image: url('../static/images/service-bg.jpg'); padding-top: 90px; padding-bottom: 65px; background-position: center; background-size: cover;">
@@ -260,7 +272,7 @@ background-position: center; ">
                             <div class="action-ads-content">
                                 <p>After decades of steady decline, the number of people who suffer from hunger – as measured by the prevalence of undernourishment – began to slowly increase again in 2015. Today, more than 820 million people regularly go to bed hungry, of whom about 135 million suffer from acute hunger largely due to man-made conflicts, climate change and economic downturns. The COVID-19 pandemic could now double that number, putting an additional 130 million people at risk of suffering acute hunger by the end of 2020, according to the World Food Programme...
                                     <a href="https://www.un.org/sustainabledevelopment/hunger/">Learn More &raquo;</a></p>
-                                <a href="https://paystack.com/pay/donateaseed" class="action-ads-button large greennature-button greennature-lb-payment" style="color: #6d5b1c;background-color: #fec428;">Donate Now</a>
+                                <a href="donate.html" class="action-ads-button large greennature-button greennature-lb-payment" style="color: #6d5b1c;background-color: #fec428;">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -283,8 +295,7 @@ background-position: center; ">
         </section>
         <!--end-->
 
-        {{ render_aboutus(render) }}
-
+      
         {{ render_ourcauses(render) }}
 
         {{ render_faq(render) }}

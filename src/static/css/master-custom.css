@@ -1220,6 +1220,6 @@
     font-size: 64px;
     letter-spacing: 4px;
     line-height: normal;
-    color: #f68d00;
+    color: #f68d00 !important;
     text-transform: uppercase;
 }

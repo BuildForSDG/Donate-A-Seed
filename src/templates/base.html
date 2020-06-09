@@ -5,7 +5,7 @@
         <div class="top-navigation-container container">
             <div class="top-navigation-left">
                 <div class="top-navigation-left-text">
-                    Phone : +1800-222-3333      Email : donateaseedoffcial@gmail.com </div>
+                    Phone : +1800-222-3333    |    Email : donateaseedoffcial@gmail.com </div>
             </div>
             <div class="top-navigation-right">
                 <div class="top-social-wrapper">
@@ -66,6 +66,8 @@
 
                         <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="shop.html" aria-current="page">Shop</a></li>
 
+                    
+
                         <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item donatelink"><a href="donate.html" aria-current="page">Donate Now</a></li>
                     </ul>
                 </div>
@@ -81,7 +83,8 @@
 
                         <li class="menu-item menu-item-home  greennature-normal-menu"><a href="#faq">FAQ</a></li>
 
-                        <li class="menu-item menu-item-home  greennature-normal-menu"><a href="shop.html">Shop*</a></li>
+                        <li class="menu-item menu-item-home  greennature-normal-menu"><a href="shop.html">Shop</a></li>
+
                     </ul>
                     <li href="donate.html" class="greennature-donate-button"><button onclick="location.href='donate.html'" type="button" id="modalBtn" class="btn-donate">Donate</button>
 
@@ -98,6 +101,9 @@
 
 {% macro render_css(render) %}
 <link rel="shortcut icon" href="{{ url_for ('static', filename='icons/favicon-1.png')}}">
+
+
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
 
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato%3A100%2C100italic%2C300%2C300italic%2Cregular%2Citalic%2C700%2C700italic%2C900%2C900italic&amp;subset=latin&amp;' type='text/css' media='all' />
 
@@ -135,9 +141,12 @@
 
 <link rel='stylesheet' href="{{ url_for ('static', filename='css/my-own.css')}}" type='text/css' media='all' />
 
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
 <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
 
 
 {% endmacro %}
@@ -805,7 +814,6 @@
 {% endmacro %}
 
 
-
 {% macro render_takeaction(render) %}
 <!--take action-->
 <section id="take-action">
@@ -823,8 +831,8 @@
                     <div class="stunning-item-caption greennature-skin-content">
                         <p>Let's End Hunger Together.</p>
                     </div>
-                    <a onclick="location.href='https://paystack.com/pay/donateaseed'" type="button" target="blank" class="stunning-item-button greennature-button large greennature-lb-payment" id="modalBtn" background-color: #ecb338; color: #ffffff;>Donate Now!</a>
-                    <a onclick="location.href='registerfarmer.html'" type="button" target="blank" class="stunning-item-button greennature-button large greennature-lb-payment" id="modalBtn" style="background-color: #ecb338 !important; color: #ffffff;">Register!</a>
+                    <a onclick="location.href='donate.html'" type="button" target="_blank" class="stunning-item-button greennature-button large greennature-lb-payment" id="modalBtn" background-color: #ecb338; color: #ffffff;>Donate Now!</a>
+                    <a onclick="location.href='register.html'" type="button" target="_blank" class="stunning-item-button greennature-button large greennature-lb-payment" id="modalBtn" style="background-color: #ecb338 !important; color: #ffffff;">Register!</a>
                 </div>
             </div>
             <div class="clear"></div>
@@ -897,7 +905,7 @@
 
                         <div class="recent-post-widget">
                             <div class="recent-post-widget-content">
-                                <div class="recent-post-widget-title"><a href="https://paystack.com/pay/donateaseed">donate</a></div>
+                                <div class="recent-post-widget-title"><a href="donate.html">donate</a></div>
                             </div>
                         </div>
 
@@ -974,7 +982,12 @@
         ms_grab_curosr = '../static/plugins/masterslider/public/assets/css/common/grab.html';
 
 </script>
+
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script type='text/javascript' src='../static/js/popper.js'></script>
 <script type='text/javascript' src='../static/js/scrolltotop.js'></script>
+<script type='text/javascript' src='../static/js/main.js'></script>
 <script type='text/javascript' src='../static/js/navsec.js'></script>
 <script type='text/javascript' src='../static/plugins/superfish/js/superfish.js'></script>
 <script type='text/javascript' src='../static/js/hoverIntent.min.js'></script>
@@ -1058,379 +1071,19 @@
     })(jQuery);
 
 </script>
+<script>
+$(function () {
+$('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+<!-- Production -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+
 
 {% endmacro %}
 
-{% macro render_formfarmer(render) %}
-<!--form farmer-->
-<section id="register">
-    <div class="cotainer p-4">
-        <div class="container p-5">
-            <div class="col-md-6 h3r">
-                <h3>Are you interested in our program? Register As A Farmer Below</h3>
-            </div>
-            <form method="POST" action="{{ url_for('auth.registerfarmer') }}">
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="firstnamefarmer">First Name</label>
-                        <input name="firstname" type="text" class="form-control" id="firstname" required>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="lastname">Last Name</label>
-                        <input name="lastname" type="text" class="form-control" id="lastname" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input name="email" type="email" class="form-control" id="email" required>
-                    <small id="emailhelp" class="form-text text-muted">
-                        We will never share your Email...
-                    </small>
-                </div>
-
-                <!--div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="username">Username</label>
-                        <input name="username" type="text" class="form-control" id="username" required>
-                    </div>
-
-                    <div class="form-group col-md-6">
-
-                        <label for="password">Password</label>
-                        <input name="password" type="password" id="password" class="form-control" aria-describedby="passwordHelpBlock">
-                        <small id="passwordHelpBlock" class="form-text text-muted">
-                            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-                        </small>
-                    </div>
-                </div-->
-
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="address">Address</label>
-                        <input name="address" type="" class="form-control" id="address" required>
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="state">State</label>
-                        <select name="state" id="state" class="form-control" required>
-                            <option selected>Choose...</option>
-                            <option>Abia</option>
-                            <option>Adamawa</option>
-                            <option>Akwa Ibom</option>
-                            <option>Anambra</option>
-                            <option>Bauchi</option>
-                            <option>Bayelsa</option>
-                            <option>Benue</option>
-                            <option>Borno</option>
-                            <option>Cross River</option>
-                            <option>Delta</option>
-                            <option>Ebonyi</option>
-                            <option>Edo</option>
-                            <option>Ekiti</option>
-                            <option>Enugu</option>
-                            <option>FCT Abuja</option>
-                            <option>Gombe</option>
-                            <option>Imo</option>
-                            <option>Jigawa</option>
-                            <option>Kaduna</option>
-                            <option>Kano</option>
-                            <option>Katsina</option>
-                            <option>Kebbi</option>
-                            <option>Kogi</option>
-                            <option>Kwara</option>
-                            <option>Lagos</option>
-                            <option>Nasarawa</option>
-                            <option>Niger</option>
-                            <option>Ogun</option>
-                            <option>Ondo</option>
-                            <option>Osun</option>
-                            <option>Oyo</option>
-                            <option>Plateau</option>
-                            <option>Rivers</option>
-                            <option>Sokoto</option>
-                            <option>Taraba</option>
-                            <option>Yobe</option>
-                            <option>Zamfara</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="lga">LGA</label>
-                        <input name="lga" type="text" class="form-control" id="lga" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="address">Phone Number</label>
-                        <input name="phone" type="number" class="form-control" id="phone">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="bvn">BVN</label>
-                        <input name="bvn" type="number" class="form-control" id="bvn">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <br>
-                        
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="customFile">
-                            <label class="custom-file-label" for="customFile">Upload Image</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group col-md-3">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="agree">
-                        <label class="form-check-label" for="agree">
-                            Agree to our terms and conditions
-                        </label>
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <button type="submit" class="btn btn-primary">Submit Application</button>
-                        </div>
-                        <div class="col-md-6">
-                            <br>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="not-a">Not a Farmer? sign up as a <a href="registerseed.html">Seed Deliverer</a> instead</p>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-<!--end form-->
-{% endmacro %}
-
-{% macro render_formseed(render) %}
-<!--form farmer-->
-<section id="register">
-    <div class="cotainer p-4">
-        <div class="container p-5">
-            <div class="col-md-6 h3r">
-                <h3>Are you interested in our program? Register As A Seed Deliverer Below</h3>
-            </div>
-            <form method="POST" action="{{ url_for('auth.registerseed') }}">
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="firstnamefarmer">First Name</label>
-                        <input name="firstname" type="text" class="form-control" id="firstname" required>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="lastname">Last Name</label>
-                        <input name="lastname" type="text" class="form-control" id="lastname" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input name="email" type="email" class="form-control" id="email" required>
-                    <small id="emailhelp" class="form-text text-muted">
-                        We will never share your Email...
-                    </small>
-                </div>
-
-                <!--div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="username">Username</label>
-                        <input name="username" type="text" class="form-control" id="username" required>
-                    </div>
-
-                    <div class="form-group col-md-6">
-
-                        <label for="password">Password</label>
-                        <input name="password" type="password" id="password" class="form-control" aria-describedby="passwordHelpBlock">
-                        <small id="passwordHelpBlock" class="form-text text-muted">
-                            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-                        </small>
-                    </div>
-                </div-->
-
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="address">Address</label>
-                        <input name="address" type="" class="form-control" id="address" required>
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="state">State</label>
-                        <select name="state" id="state" class="form-control" required>
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                            <option>Abia</option>
-                            <option>Adamawa</option>
-                            <option>Akwa Ibom</option>
-                            <option>Anambra</option>
-                            <option>Bauchi</option>
-                            <option>Bayelsa</option>
-                            <option>Benue</option>
-                            <option>Borno</option>
-                            <option>Cross River</option>
-                            <option>Delta</option>
-                            <option>Ebonyi</option>
-                            <option>Edo</option>
-                            <option>Ekiti</option>
-                            <option>Enugu</option>
-                            <option>FCT Abuja</option>
-                            <option>Gombe</option>
-                            <option>Imo</option>
-                            <option>Jigawa</option>
-                            <option>Kaduna</option>
-                            <option>Kano</option>
-                            <option>Katsina</option>
-                            <option>Kebbi</option>
-                            <option>Kogi</option>
-                            <option>Kwara</option>
-                            <option>Lagos</option>
-                            <option>Nasarawa</option>
-                            <option>Niger</option>
-                            <option>Ogun</option>
-                            <option>Ondo</option>
-                            <option>Osun</option>
-                            <option>Oyo</option>
-                            <option>Plateau</option>
-                            <option>Rivers</option>
-                            <option>Sokoto</option>
-                            <option>Taraba</option>
-                            <option>Yobe</option>
-                            <option>Zamfara</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="lga">LGA</label>
-                        <input name="lga" type="text" class="form-control" id="lga" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="address">Phone Number</label>
-                        <input name="phone" type="number" class="form-control" id="phone">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="bvn">BVN</label>
-                        <input name="bvn" type="number" class="form-control" id="bvn">
-                    </div>
-
-                    <div class="custom-file col-md-3">
-                        <input type="file" class="custom-file-input" id="customFile">
-                        <label class="custom-file-label" for="customFile">Upload Image</label>
-                      </div>
-                </div>
-
-                <div class="form-group col-md-3">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="agree">
-                        <label class="form-check-label" for="agree">
-                            Agree to terms and conditions
-                        </label>
-                    </div>
-                </div>
 
 
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <button type="submit" class="btn btn-primary">Submit Application</button>
-                        </div>
-                        <div class="col-md-6">
-                            <br>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="not-a">Not a Seed Deliverer? sign up as a <a href="registerfarmer.html">Farmer instead</a></p>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-<!--end form-->
-{% endmacro %}
 
-{% macro render_donatemodal(render) %}
-<!--donate popup-->
-<section id="donate-popup">
-    <div id="simpleModal" class="modal1">
-        <div class="modal1-content">
-            <div class="modal-header">
-                <h3>Your Help Means A Lot To Us.</h3>
-                <span class="closeBtn">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="cotainer p-4">
-                    <div class="container p-1">
-                        <form method="POST" action="">
-                            <div class="form-group">
-                                <label for="donate-amount"><b>How much would you like to donate?</b></label>
-                                <div class="container">
-                                    <div class="form-row">
-                                        <div class="btn-group btn-group-toggle col-md-6 mb-3" data-toggle="buttons">
-                                            <label class="btn btn-primary col-md-6 mb-3">
-                                                <input type="radio" name="options" id="option1"> #1000
-                                            </label>
-                                            <label class="btn btn-primary col-md-6 mb-3">
-                                                <input type="radio" name="options" id="option2"> #50,000
-                                            </label>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <input type="number" class="form-control" id="donate-amount" placeholder="amount in (Naira)" required>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="firstnamefarmer">First Name*</label>
-                                    <input name="firstname" type="text" class="form-control" id="firstname" required>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="lastname">Last Name*</label>
-                                    <input name="lastname" type="text" class="form-control" id="lastname" required>
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="email">Email Address*</label>
-                                    <input name="email" type="email" class="form-control" id="email" required>
-                                    <small id="emailhelp" class="form-text text-muted">
-                                        We will never share your Email...
-                                    </small>
-                                </div>
-
-                                <div class="form-group col-md-6">
-                                    <label for="address">Phone Number</label>
-                                    <input name="phone" type="number" class="form-control" id="phone">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Additional Notes</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="note: this will appear on our home page"></textarea>
-                            </div>
-
-
-                            <button type="submit" class="btn btn-primary">Donate Now</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</section>
-<!--end popup-->
-{% endmacro%}

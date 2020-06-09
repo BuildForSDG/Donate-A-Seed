@@ -602,7 +602,7 @@ video {
     max-width: none;
 }
 
-input[type="text"],
+/**input[type="text"],
 input[type="email"],
 input[type="password"],
 textarea {
@@ -610,7 +610,7 @@ textarea {
     outline: none;
     padding: 6px;
     max-width: 100%;
-}
+}/**/
 
 /*--- transition / color animation  ---*/
 a {

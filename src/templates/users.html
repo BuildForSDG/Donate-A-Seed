@@ -1,0 +1,81 @@
+{% from "base.html" import render_scrolltotop, render_aboutus, render_ourcauses, render_faq, render_contactus, render_ourteam, render_sponsors, render_subscribenews, render_takeaction, render_footer, render_js, render_formseed, render_navbar, render_css, render_donatemodal %}
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1.0" />
+    
+        {% if title %}
+        <title>Users - {{ title }}</title>
+        {% else %}
+        <title>Users</title>
+        {% endif %}
+    
+        {{ render_css(render) }}
+    
+    </head>
+
+
+<body data-rsssl=1 class="home page-template-default page page-id-5680 _masterslider _msp_version_3.2.7 woocommerce-no-js">
+
+
+    <div class="row">
+        <div class="col-md p-1" id="flash_message">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                {% if category == 'success' %}
+                <div class="alert alert-success" role="alert">
+                    {{ message }}!
+                </div>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+            
+            {% if messages %}
+                {% for category, message in messages %}
+                {% if category == 'error' %}
+                <div class="alert alert-danger" role="alert">
+                    Error:  {{ message }}!
+                </div>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
+        <div class="col-lg-12">
+            <div class="list-group">
+                {% block content %}
+                <h1>{{ username }} this is just a demo, below are current registered accounts</h1>
+                {% endblock %}
+                {% for user in users %}
+                <a href="#" class="list-group-item {% if user.farmer %}active{% endif %}">
+                    <div class="col-md-3">
+                        <h4 class="list-group-item-heading">username: {{ user.username }}</h4>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h4 class="list-group-item-heading">email: {{ user.email }}</h4>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h4 class="list-group-item-heading">firstname: {{ user.firstname }}</h4>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h4 class="list-group-item-heading">registered as: {{ user.usertype }}</h4>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h4 class="list-group-item-heading">{{ user.profilepic }}</h4>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>    
+
+</html> 

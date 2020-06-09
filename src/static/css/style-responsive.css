@@ -30,6 +30,8 @@ html body {
         margin-left: 25px;
     }
 
+   
+
     .greennature-navigation-wrapper .greennature-main-menu > li > a.sf-with-ul-pre,
     .greennature-navigation-wrapper .greennature-main-menu > li > a.sf-with-ul .greennature-navigation-wrapper .greennature-main-menu > li > a {
         padding-right: 25px;
@@ -77,6 +79,8 @@ html body {
         height: 70px;
     }
 
+ 
+
     body .greennature-fixed-header .greennature-logo {
         display: none;
     }
@@ -86,6 +90,19 @@ html body {
     body .container {
         max-width: 768px;
     }
+
+    #register .login-container {
+        background-color: #f4f4f4;
+        border-radius: 0px;
+        display: -moz-grid-group;
+        align-items: center;
+    }
+
+    /**#modalBtn {
+        height: 70px;
+        margin-bottom: 0px;
+        margin-top: 68px;    }**/
+
 
     body .body-wrapper.greennature-boxed-style {
         max-width: 808px;
@@ -433,6 +450,13 @@ html body {
 @media only screen and (max-width: 419px) {
     body .container {
         max-width: 300px;
+    }
+
+    #register .login-container {
+        background-color: #f4f4f4;
+        border-radius: 0px;
+        display: -moz-grid-group;
+        align-items: center;
     }
 
     body .body-wrapper.greennature-boxed-style {
