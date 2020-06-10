@@ -208,8 +208,20 @@ input[type="color"]:focus,
     box-shadow: 10px 10px 77px -32px rgba(0,0,0,0.75);
 }
 
-#donate h1, #donate p{
+#donate h1, #donate p {
     color: #222;
+}
+
+#donate p {
+    margin-bottom: 0px !important;
+}
+
+#donate .form-control::placeholder {
+    font-family: 'Montserrat', sans-serif;
+	color: #393c3f;
+	opacity: 1;
+	font-size: 12px;
+	font-weight: normal;
 }
 
 #register-form 
@@ -324,7 +336,7 @@ input[type="color"]:focus,
 /**DONATE START**/
 
 #secured {
-    font-family: "Montserrat";
+    font-family: 'Montserrat', sans-serif;
 }
 
 #donate .img{

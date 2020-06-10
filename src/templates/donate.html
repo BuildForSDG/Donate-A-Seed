@@ -98,25 +98,27 @@
                                     {% endwith %}
                                 </div>
                             </div>
+
+                            <div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
         
                             <div class="form-row">
                                 <div class="form-group col-md">
                                     <label for="donator-email"><p>Email Address*</p></label>
-                                    <input name="donator-email" type="email" class="form-control" id="donator-email" required>
+                                    <input name="donator-email" type="email" class="form-control" id="donator-email" required placeholder="please enter an email address">
                                 </div>
                             </div>
      
                             <div class="form-row">
                              <div class="form-group col-md">
-                                 <label for="donator-name"><p>Name</p></label>
-                                 <input name="donator-name" type="text" class="form-control" id="donator-name" required>
+                                 <label for="donator-name"><p>Name*</p></label>
+                                 <input name="donator-name" type="text" class="form-control" id="donator-name" required placeholder="please enter a name">
                              </div>
                          </div>
      
                          <div class="form-row">
                              <div class="form-group col-md">
                                  <label for="donate-amount"><p>Amount*</p></label>
-                                 <input name="donate-amount" type="number" class="form-control" id="donate-amount" required>
+                                 <input name="donate-amount" type="number" class="form-control" id="donate-amount" required placeholder="amount in NAIRA">
                              </div>
                          </div>
 
@@ -194,13 +196,13 @@
                     // Using Ajax to verify the transaction
                     callback: function(response){
                     $.ajax({
-                        url: '/donated',  
-                        dataType: 'json',                  
                         data: $('form').serialize(),
                         type: 'POST',
-                        success: function (response) {
-
-                        }
+                        url: '/donated',  
+                        dataType: 'json',                                                               
+                    })
+                    .done(function(data) {
+                        $('#successAlert').text(data.Thanks).show();
                     });
                     },
 

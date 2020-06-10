@@ -40,9 +40,11 @@ def donated():
         #db.session.add(new_donator)
         #db.session.commit()
 
-        flash('Thank you {} for your Donations. It means a lot to us'.format(donator_name), 'success')
+        return jsonify({'Thanks' : "Thank you" + donator_name + "for your Donation of" + donate_amount})
 
-        return redirect(url_for('main.index'))
+        #flash('Thank you {} for your Donations. It means a lot to us'.format(donator_name), 'success')
+
+        #return redirect(url_for('main.index'))
 
     return render_template('donated.html')
 
