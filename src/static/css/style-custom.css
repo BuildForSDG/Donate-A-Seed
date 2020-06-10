@@ -243,6 +243,7 @@ h6 {
 
 #greennature-responsive-navigation.dl-menuwrapper button {
     background-color: #0c0c0c;
+    border-radius: 4px;
 }
 
 #greennature-responsive-navigation.dl-menuwrapper button:hover,
@@ -850,7 +851,7 @@ body .flex-direction-nav a:hover,
     color: #6d6d6d;
 }
 
-input[type="text"],
+/**input[type="text"],
 input[type="email"],
 input[type="password"],
 textarea {
@@ -862,7 +863,7 @@ input[type="email"],
 input[type="password"],
 textarea {
     color: #797979;
-}
+}**/
 
 input::input-placeholder {
     color: #797979;

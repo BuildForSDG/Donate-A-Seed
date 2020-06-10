@@ -1,63 +1,219 @@
-{% from "base.html" import render_aboutus, render_ourcauses, render_faq, render_contactus, render_ourteam, render_sponsors, render_subscribenews, render_takeaction, render_footer, render_js, render_form, render_navbar, render_css, render_donatemodal %}
+{% from "base.html" import render_scrolltotop, render_aboutus, render_ourcauses, render_faq, render_contactus, render_ourteam, render_sponsors, render_subscribenews, render_takeaction, render_footer, render_js, render_register, render_formseed, render_navbar, render_css, render_donatemodal %}
+
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1.0" />
 
+    {% if title %}
+    <title>Register - {{ title }}</title>
+    {% else %}
     <title>Donate</title>
+    {% endif %}
 
     {{ render_css(render) }}
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+   
 </head>
 
-<body class="donate">
-    <div class="body-wrapper  float-menu">
 
-        {{ render_navbar(render) }}
 
-        {{ render_donatemodal(render) }}
+<body class="donate-body">
+    <!--Donation Form-->
+    <section id="donate">
+      
+        <div class="container">
+            <div class="container h-100 p-5">
+                <div class="row align-items-center text-center h-100">
+                    <div class="mx-auto">
+                        <div class="col p-3">
+                                <img class="avatar" src="../static/images/donation-hand.svg">
+                            <h1>DONATE</h1>
+                            <p>Help us End Hunger and make this world a better place. </p>
+                       </div>
+                    </div>
+                </div>
+            </div>
+   
+           <div class="container col">
+               <div class="row">
+                   <div class="col-md"></div>
+                   <div class="col-md">
+                    <div class="col-md mb-0">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                              <li class="breadcrumb-item" aria-current="page"><a href="register.html">Register</a></li>
+                              <li class="breadcrumb-item" aria-current="page"><a href="login.html">Login</a></li>
+                            </ol>
+                          </nav>
+                       </div>
+                   </div>
+               </div>
+              
 
-        <div class="content-wrapper">
-            <div class="greennature-content">
+               <div class="row">
+                   <div class="col-md">
+                       <div class="img">
+			<img src="../static/images/pay.svg">
+		</div>
+                   </div>
 
-                <!-- Above Sidebar Section-->
 
-                <!-- Sidebar With Content Section-->
-                <div class="with-sidebar-wrapper">
-                    <section id="content-section-1">
-                        <div class="greennature-parallax-wrapper greennature-background-image gdlr-show-all greennature-skin-dark-skin" id="greennature-parallax-wrapper-1" data-bgspeed="0" style="background-image: url({{ url_for('static', filename='images/farmer-5.jpg')}}); background-size: cover; background-position: center; padding-top: 260px; padding-bottom: 140px; ">
-                            <div class="container">
-                                <div class="greennature-title-item">
-                                    <div class="greennature-item-title-wrapper greennature-item  greennature-center greennature-extra-large ">
-                                        <div class="greennature-item-title-container container">
-                                            <div class="greennature-item-title-head">
-                                                <h3 class="greennature-item-title greennature-skin-title greennature-skin-border">REGISTER</h3>
-                                                <div class="greennature-item-title-caption greennature-skin-info">As a SEED DELIVERER</div>
-                                                <div class="clear"></div>
-                                            </div>
+                   <div class="col-md">
+                    <div class="card p-5 mb-5">
+                        <form id="paymentForm" method="POST" action="{{ url_for('main.donate') }}" role="form">
+                            <script type="" src="https://js.paystack.co/v1/inline.js"></script>
+                            <div class="col-md pb-4 text-center">
+                             <h5 style="color: #32be8f;">DONATION</h5>
+                             <h6>Your donations means a lot to us!</h6>
+                            </div>
+
+                            <div class="col">
+                                <div class="col-md p-1" id="flash_message">
+                                    {% with messages = get_flashed_messages(with_categories=true) %}
+                                    {% if messages %}
+                                        {% for category, message in messages %}
+                                        {% if category == 'success' %}
+                                        <div class="alert alert-success" role="alert">
+                                            {{ message }}!
                                         </div>
-                                    </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    {% endif %}
+                                    
+                                    {% if messages %}
+                                        {% for category, message in messages %}
+                                        {% if category == 'error' %}
+                                        <div class="alert alert-danger" role="alert">
+                                            Error:  {{ message }}!
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    {% endif %}
+                                    {% endwith %}
                                 </div>
-                                <div class="clear"></div>
-                                <div class="clear"></div>
+                            </div>
+
+                            <div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
+        
+                            <div class="form-row">
+                                <div class="form-group col-md">
+                                    <label for="donator-email"><p>Email Address*</p></label>
+                                    <input name="donator-email" type="email" class="form-control" id="donator-email" required placeholder="please enter an email address">
+                                </div>
+                            </div>
+     
+                            <div class="form-row">
+                             <div class="form-group col-md">
+                                 <label for="donator-name"><p>Name*</p></label>
+                                 <input name="donator-name" type="text" class="form-control" id="donator-name" required placeholder="please enter a name">
+                             </div>
+                         </div>
+     
+                         <div class="form-row">
+                             <div class="form-group col-md">
+                                 <label for="donate-amount"><p>Amount*</p></label>
+                                 <input name="donate-amount" type="number" class="form-control" id="donate-amount" required placeholder="amount in NAIRA">
+                             </div>
+                         </div>
+
+                         <div class="form-row mb-2">
+                            <div class="col-md">
+                                <label for="donate-phonenumber"><p>Phone number</p></label>
+                                <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">+234</div>
+                                </div>
+                                <input type="number" name="donate-phonenumber" class="form-control" id="donate-phonenumber" maxlength="10" minlength="10">
+                                </div>
                             </div>
                         </div>
-                        <div class="clear"></div>
-                    </section>
-                </div>
-                <!-- Below Sidebar Section-->
-            </div>
-            <!-- greennature-content -->
-            <div class="clear"></div>
+
+                        <div class="form-group">
+                            <label for="donator-note"><p>Additional notes</p></label>
+                            <textarea class="form-control" id="donator-note" rows="3" placeholder="note: this will be displayed on our homepage!"></textarea>
+                          </div>
+
+                        <div class="col-md mt-3">
+                            <div class="col">
+                                <button class="btn" type="submit" onclick="payWithPaystack()"> Donate Now </button>                             </div>  
+                        </div>
+
+                        <div id="secured" class="col text-center mt-5">
+                            <p><i class="fa fa-lock"></i> SECURED</p>
+                        </div>
+        
+                        </form>
+     
+                        </div>
+                   </div>
+               </div>        
         </div>
-        <!-- content wrapper -->
-    </div>
 
-    {{ render_subscribenews(render) }}
+    </section>
+    <!--end donate form-->
+      
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js">
+    </script>
 
-    {{ render_footer(render) }}
+    <script>
+        const element = document.querySelector('form');
+        element.addEventListener('submit', event => {
+        event.preventDefault();
+        // actual logic, e.g. validate the form
+        console.log('Form submission cancelled.');
+        });
+    </script>
 
-    {{ render_js(render) }}
+    <script>
+        var paymentForm = document.getElementById('paymentForm');
+        paymentForm.addEventListener("submit", payWithPaystack, false);
+        
+                function payWithPaystack(){
+                  var handler = PaystackPop.setup({
+                    key: 'pk_test_e13e729eec9612428bbdaeb9c80f2e1fb03d0dcf',
+                    email: document.getElementById('donator-email').value,
+                    amount: document.getElementById('donate-amount').value * 100,
+                    currency: "NGN",
+                    ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+                    metadata: {
+                       custom_fields: [
+                          {
+                              display_name: "Mobile Number",
+                              variable_name: "mobile_number",
+                              value: document.getElementById('donate-phonenumber').value,
+                          }
+                       ]
+                    },
+              
+              
+                   //Paystack inline callback function
+                    // Using Ajax to verify the transaction
+                    callback: function(response){
+                    $.ajax({
+                        data: $('form').serialize(),
+                        type: 'POST',
+                        url: '/donated',  
+                        dataType: 'json',                                                               
+                    })
+                    .done(function(data) {
+                        $('#successAlert').text(data.Thanks).show();
+                    });
+                    },
+
+
+                    onClose: function(){
+                        alert('Payment Cancelled');
+                    }
+                  });
+                  handler.openIframe();
+                }
+    </script>
 </body>
+
 </html>

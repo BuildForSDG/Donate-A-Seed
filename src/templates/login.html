@@ -1,31 +1,109 @@
+{% from "base.html" import render_scrolltotop, render_aboutus, render_ourcauses, render_faq, render_contactus, render_ourteam, render_sponsors, render_subscribenews, render_takeaction, render_footer, render_js, render_register, render_formseed, render_navbar, render_css, render_donatemodal %}
+
+<!DOCTYPE html>
 <html>
-<body>
-                         <section id="asfarmer">
-                        <div class="cotainer p-4">
-                            <div class="container p-5">
-                                <header>DEMO PAGE</header>
-                                <h1>u got here bcuz u created an account</h1>
-                                <form method="POST" action="{{ url_for('auth.login') }}">
 
-                                        <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="username">Username</label>
-                                        <input name="username" type="text" class="form-control" id="username" required>
-                                    </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0" />
 
-                                            <div class="form-group col-md-6">
+    {% if title %}
+    <title>Login - {{ title }}</title>
+    {% else %}
+    <title>Login</title>
+    {% endif %}
 
-                                                <label for="password">Password</label>
-<input name="password" type="password" id="password" class="form-control" aria-describedby="passwordHelpBlock">
-                                            </div>
-                                        </div>
+    {{ render_css(render) }}
+</head>
 
-                                    <button type="submit" class="btn btn-primary">Submit Application</button>
-                                </form>
-                                <h3>if you get redirected to home page it means u entered the correct details</h3>
-                            </div>
-                        </div>
-                    </section>
+
+<body class="login-body">
+<section id="login">
+
+	<div class="container">
+		<div class="img">
+			<img src="../static/images/bg.svg">
+		</div>
+		<div class="login-content">
+			<div class="card mt-5 mb-5">
+				<div class="col-md mb-0">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+						  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+						  <li class="breadcrumb-item"><a href="register.html">Register</a></li>
+						  <li class="breadcrumb-item" aria-current="page"><a href="donate.html">Donate</a></li>
+						</ol>
+					  </nav>
+				   </div>
+				<div class="card-body">
+					
+					<form method="POST" action="{{ url_for('auth.login') }}">
+						<div class="col-md p-1" id="flash_message">
+							{% with messages = get_flashed_messages(with_categories=true) %}
+							{% if messages %}
+								{% for category, message in messages %}
+								{% if category == 'success' %}
+								<div class="alert alert-success" role="alert">
+									{{ message }}!
+								</div>
+								{% endif %}
+								{% endfor %}
+							{% endif %}
+							
+							{% if messages %}
+								{% for category, message in messages %}
+								{% if category == 'error' %}
+								<div class="alert alert-danger" role="alert">
+									Error:  {{ message }}!
+								</div>
+								{% endif %}
+								{% endfor %}
+							{% endif %}
+							{% endwith %}
+						</div>
+						<img src="../static/images/avatar.svg">
+						<h2 class="title">Login</h2>
+						   <div class="input-div pass">
+							  <div class="i">
+									  <i class="fa fa-user"></i>
+							  </div>
+							  <div class="div">
+									  <h5>Username</h5>
+									  <input type="text" name="username" class="input" required>
+							  </div>
+						   </div>
+						   <div class="input-div pass">
+							  <div class="i"> 
+								   <i class="fa fa-lock"></i>
+							  </div>
+							  <div class="div">
+								   <h5>Password</h5>
+								   <input type="password" name="password" class="input" required>
+						   </div>
+						</div>
+						<div class="row mt-3">
+							<div class="col-md-6 text-left">
+								<div class="custom-control custom-checkbox mr-sm-2">
+									<input type="checkbox" class="custom-control-input" name="remember" id="rememberme">
+									<label class="custom-control-label" for="rememberme">Remember me</label>
+								</div>							
+							</div>
+							<div class="col-md-6">
+								<a href="#">Forgot Password?</a>
+							</div>
+						</div>
+						<input type="submit" class="btn" value="Login">
+					</form>
+					<div class="col-md text-center">
+						<a href="register.html" class="text-center">New to Donate a Seed? click here to Register</a>
+					</div>
+				</div>
+			</div>
+				
+        </div>
+    </div>
+    <script type='text/javascript' src='../static/js/main.js'></script>
+</section>
 </body>
 
 

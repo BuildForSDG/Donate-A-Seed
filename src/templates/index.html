@@ -12,10 +12,9 @@
 </head>
 
 <body data-rsssl=1 class="home page-template-default page page-id-5680 _masterslider _msp_version_3.2.7 woocommerce-no-js" style="background-image: url(../static/images/body.svg)">
-    
-    {{ render_donatemodal(render) }}
 
-    
+
+
     <div class="body-wrapper float-menu">
 
 
@@ -79,22 +78,29 @@
 
                                 <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="index.html" aria-current="page">Home</a></li>
 
-                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="index.html" aria-current="page">About Us</a></li>
+                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="#about-us" aria-current="page">About Us</a></li>
 
-                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="index.html" aria-current="page">Causes</a></li>
+                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="#our-causes" aria-current="page">Causes</a></li>
 
-                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="index.html" aria-current="page">FAQ</a></li>
+                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="#faq" aria-current="page">FAQ</a></li>
 
-                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="index.html" aria-current="page">Contact Us</a></li>
+                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="#contact-us" aria-current="page">Contact Us</a></li>
 
-                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="index.html" aria-current="page">Shop</a></li>
+                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="shop.html" aria-current="page">Shop</a></li>
 
-                                <li ss="menu-item menu-item-has-children menu-item-"><a href="#">Register</a>
+                                {% if current_user.is_authenticated %}
+                                <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="{{ url_for('auth.logout') }}" aria-current="page">Logout</a></li>
+                                {% endif %}
+                            
+
+                                {% if not current_user.is_authenticated %}
+                                <li ss="menu-item menu-item-has-children menu-item-"><a>Account</a>
                                     <ul class="dl-submenu">
-                                        <li class="menu-item"><a href="registerfarmer.html">As a Farmer</a></li>
-                                        <li class="menu-item"><a href="registerseed.html">As a Seed Deliverer</a></li>
+                                        <li class="menu-item"><a href="login.html">Login</a></li>
+                                        <li class="menu-item"><a href="register.html">Register</a></li>
                                     </ul>
                                 </li>
+                                {% endif %}
 
                                 <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item donatelink"><a href="donate.html" aria-current="page">Donate Now</a></li>
                             </ul>
@@ -111,21 +117,24 @@
 
                                 <li class="menu-item menu-item-home  greennature-normal-menu"><a href="#our-causes">Causes</a></li>
 
-                                <li class="menu-item menu-item-home  greennature-normal-menu"><a href="#faq">FAQ</a></li>
-
                                 <li class="menu-item menu-item-home  greennature-normal-menu"><a href="#contact-us">Contact Us</a></li>
 
-                                <li class="menu-item menu-item-home  greennature-normal-menu"><a href="index.html">Shop*</a></li>
+                                <li class="menu-item menu-item-home  greennature-normal-menu"><a href="shop.html">Shop</a></li>
 
-                                <li class="menu-item menu-item-has-children greennature-normal-menu"><a href="#" class="sf-with-ul-pre">Register</a>
+                                {% if current_user.is_authenticated %}
+                                <li class="menu-item menu-item-home  greennature-normal-menu"><a href="logout.html">Logout</a></li>
+                                {% endif %}
+
+                                {% if not current_user.is_authenticated %}
+                                <li class="menu-item menu-item-has-children greennature-normal-menu"><a class="sf-with-ul-pre">Account</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item"><a href="registerfarmer.html">As a Farmer</a></li>
-                                        <li class="menu-item"><a href="registerseed.html">As a Seed Deliverer</a></li>
+                                        <li class="menu-item"><a href="login.html">Login</a></li>
+                                        <li class="menu-item"><a href="register.html">Register</a></li>
                                     </ul>
                                 </li>
+                                {% endif %}
                             </ul>
-                           <li class="greennature-donate-button"><button type="button" id="modalBtn" class="btn-donate">Donate</button>
-                    </a> 
+                            <li href="donate.html" class="greennature-donate-button"><button onclick="location.href='donate.html'" type="button" id="modalBtn" class="btn-donate">Donate</button>
                         </nav>
                         <div class="greennature-navigation-gimmick" id="greennature-navigation-gimmick"></div>
                         <div class="clear"></div>
@@ -180,10 +189,10 @@ color: #ecb338;" class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159
                                 <img src="{{ url_for('static', filename='plugins/masterslider/public/assets/css/blank.gif')}}" alt="" title="" data-src="{{ url_for('static', filename='images/dem-look.jpg')}}" />
 
                                 <div class="ms-layer  msp-cn-1-10" style="" data-effect="t(true,n,n,-500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="425" data-delay="425" data-ease="easeOutQuint" data-offset-x="0" data-offset-y="82" data-origin="mc" data-position="normal">
-                                    According to this measure, 226.7 million people are starving in Africa. The countries most affected by extreme poverty and hunger in Africa are mainly those located south of the Sahara. One in four people suffers from hunger there – which means that the share of the world's hungry is highest in sub-Saharan Africa.</div>
+                                    THIS WORLD A BETTER PLACE</div>
 
                                 <div class="ms-layer  msp-cn-1-13" style="" data-effect="t(true,n,n,500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="437" data-ease="easeOutQuint" data-offset-x="0" data-offset-y="-15" data-origin="mc" data-position="normal">
-                                    Make This World</div>
+                                    TOGETHER WE CAN MAKE</div>
                             </div>
                         </div>
                         <!-- END MasterSlider Main -->
@@ -217,11 +226,11 @@ color: #ecb338;" class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159
                     <div class="four columns">
                         <div class="greennature-ux column-service-ux">
                             <div class="greennature-item greennature-column-service-item greennature-type-2-bg" style="margin-bottom: 0px; background-color: #3f3221; height: ;">
-                                <div class="column-service-image"><img src="{{ url_for('static', filename='images/donation.png')}}" alt="" width="80" height="80"/></div>
+                                <div class="column-service-image"><img src="{{ url_for('static', filename='images/donation.png')}}" alt="" width="80" height="80" /></div>
                                 <div class="column-service-content-wrapper">
                                     <h3 class="column-service-title">We Need Your Help</h3>
                                     <div class="column-service-content greennature-skin-content">
-                                        <p>With more than a quarter of a billion people potentially at the brink of starvation, swift action needs to be taken to provide food and humanitarian relief to the most at-risk regions.</p>             
+                                        <p>With more than a quarter of a billion people potentially at the brink of starvation, swift action needs to be taken to provide food and humanitarian relief to the most at-risk regions.</p>
                                         <br>
                                     </div><a class="column-service-read-more" href="donate.html" target="_blank">Donate Now</a>
                                 </div>
@@ -248,9 +257,11 @@ color: #ecb338;" class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159
         </section>
         <!--end-->
 
+        {{ render_aboutus(render) }}
+
         <!--sec3-->
         <section id="content-section-3">
-            <div class="greennature-parallax-wrapper greennature-background-image gdlr-show-all no-skin" id="greennature-parallax-wrapper-1" data-bgspeed="0.11" style="background-image: url('../static/images/shutterstock_147266159-1024x605.jpg'); padding-top: 90px; padding-bottom: 65px; background-position: center; background-size: cover;">
+            <div class="greennature-parallax-wrapper greennature-background-image gdlr-show-all no-skin" id="greennature-parallax-wrapper-1" data-bgspeed="0.11" style="background-image: url('../static/images/service-bg.jpg'); padding-top: 90px; padding-bottom: 65px; background-position: center; background-size: cover;">
                 <div class="container">
                     <div class="six columns">
                         <div class="greennature-item greennature-action-ads-item" style="background: url('../static/images/sad-boy.jpg'); background-size: cover;
@@ -259,8 +270,8 @@ background-position: center; ">
                             <div class="action-ads-caption greennature-skin-info">Lets stop this Hunger and fufill their happiness</div>
                             <div class="action-ads-divider" style="background: #facc2e;"></div>
                             <div class="action-ads-content">
-                               <p>After decades of steady decline, the number of people who suffer from hunger – as measured by the prevalence of undernourishment – began to slowly increase again in 2015. Today, more than 820 million people regularly go to bed hungry, of whom about 135 million suffer from acute hunger largely due to man-made conflicts, climate change and economic downturns. The COVID-19 pandemic could now double that number, putting an additional 130 million people at risk of suffering acute hunger by the end of 2020, according to the World Food Programme...
-                                   <a href="https://www.un.org/sustainabledevelopment/hunger/">Learn More &raquo;</a></p>
+                                <p>After decades of steady decline, the number of people who suffer from hunger – as measured by the prevalence of undernourishment – began to slowly increase again in 2015. Today, more than 820 million people regularly go to bed hungry, of whom about 135 million suffer from acute hunger largely due to man-made conflicts, climate change and economic downturns. The COVID-19 pandemic could now double that number, putting an additional 130 million people at risk of suffering acute hunger by the end of 2020, according to the World Food Programme...
+                                    <a href="https://www.un.org/sustainabledevelopment/hunger/">Learn More &raquo;</a></p>
                                 <a href="donate.html" class="action-ads-button large greennature-button greennature-lb-payment" style="color: #6d5b1c;background-color: #fec428;">Donate Now</a>
                             </div>
                         </div>
@@ -284,8 +295,7 @@ background-position: center; ">
         </section>
         <!--end-->
 
-        {{ render_aboutus(render) }}
-
+      
         {{ render_ourcauses(render) }}
 
         {{ render_faq(render) }}

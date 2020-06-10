@@ -1216,11 +1216,10 @@
 }
 
 .msp-cn-1-13 {
-    font-family: "PT Sans";
     font-weight: 900;
     font-size: 64px;
     letter-spacing: 4px;
     line-height: normal;
-    color: #2d2418;
+    color: #f68d00 !important;
     text-transform: uppercase;
 }

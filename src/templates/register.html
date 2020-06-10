@@ -1,0 +1,240 @@
+{% from "base.html" import render_scrolltotop, render_aboutus, render_ourcauses, render_faq, render_contactus, render_ourteam, render_sponsors, render_subscribenews, render_takeaction, render_footer, render_js, render_register, render_formseed, render_navbar, render_css, render_donatemodal %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0" />
+
+    {% if title %}
+    <title>Register - {{ title }}</title>
+    {% else %}
+    <title>Register</title>
+    {% endif %}
+
+    {{ render_css(render) }}
+</head>
+
+
+
+<body class="register-body">
+    <!--Register Form-->
+    <section id="register">
+        <div class="container">
+            <div class="container h-100 p-5">
+                <div class="row align-items-center text-center h-100">
+                    <div class="mx-auto">
+                        <div class="col p-3">
+                                <img class="avatar" src="../static/images/avatar.svg">
+                            <h1>REGISTER</h1>
+                            <p>Are you interested in our Program? <br>Create an account and join the movement... </p>
+                       </div>
+                    </div>
+                </div>
+            </div>
+   
+           <div class="container col">
+               <div class="col-md-6 mb-0">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                      <li class="breadcrumb-item" aria-current="page"><a href="donate.html">Donate</a></li>
+                    </ol>
+                  </nav>
+               </div>
+   
+              <div class="card p-5 mb-5">
+                   <form id="register-form" method="POST" action="{{ url_for('auth.register') }}" enctype="multipart/form-data">
+                       <div class="col-md pb-4 text-left">
+                        <h5 style="color: #32be8f;">CREATE ACCOUNT</h5>
+                        <h6>Please fill in your correct details!</h6>
+                       </div>
+                       <div class="form-row">
+                           <div class="form-group col-md-6">
+                               <label for="firstname"><p>Firstname*</p></label>
+                               <input name="firstname" type="text" class="form-control" id="firstname" minlength="6" required>
+                           </div>
+                           <div class="form-group col-md-6">
+                               <label for="lastname"><p>Lastname*</p></label>
+                               <input name="lastname" type="text" class="form-control" id="lastname" minlength="6" required>
+                           </div>
+                       </div>
+   
+                       <div class="form-row">
+                           <div class="form-group col-md">
+                               <label for="email"><p>Email Address*</p></label>
+                               <input name="email" type="email" class="form-control" id="email" required>
+                           </div>
+                       </div>
+   
+                       <div class="form-row">
+                           <div class="form-group col-md-6">
+                               <label for="username"><p>Username*</p></label>
+                               <input name="username" type="text" class="form-control" id="username" minlength="6" required>
+                           </div>
+                           <div class="form-group col-md-6">
+                               <label for="password"><p>Password*</p></label>
+                               <input name="password" type="password" class="form-control" id="password" minlength="6" required>
+                           </div>
+                       </div>
+   
+                       <div class="form-row">
+                           <div class="form-group col-md-6">
+                               <label for="address"><p>Address*</p></label>
+                               <input name="address" type="text" class="form-control" id="address" required>
+                           </div>
+                           <div class="form-group col-md-6">
+                               <label for="state"><p>State*</p></label>
+                               <select name="state" id="state" class="form-control custom-select" required placeholder="select state">
+                                    <option selected disabled value="">Choose...</option>
+                                   <option>Abia</option>
+                                   <option>Adamawa</option>
+                                   <option>Akwa Ibom</option>
+                                   <option>Anambra</option>
+                                   <option>Bauchi</option>
+                                   <option>Bayelsa</option>
+                                   <option>Benue</option>
+                                   <option>Borno</option>
+                                   <option>Cross River</option>
+                                   <option>Delta</option>
+                                   <option>Ebonyi</option>
+                                   <option>Edo</option>
+                                   <option>Ekiti</option>
+                                   <option>Enugu</option>
+                                   <option>FCT Abuja</option>
+                                   <option>Gombe</option>
+                                   <option>Imo</option>
+                                   <option>Jigawa</option>
+                                   <option>Kaduna</option>
+                                   <option>Kano</option>
+                                   <option>Katsina</option>
+                                   <option>Kebbi</option>
+                                   <option>Kogi</option>
+                                   <option>Kwara</option>
+                                   <option>Lagos</option>
+                                   <option>Nasarawa</option>
+                                   <option>Niger</option>
+                                   <option>Ogun</option>
+                                   <option>Ondo</option>
+                                   <option>Osun</option>
+                                   <option>Oyo</option>
+                                   <option>Plateau</option>
+                                   <option>Rivers</option>
+                                   <option>Sokoto</option>
+                                   <option>Taraba</option>
+                                   <option>Yobe</option>
+                                   <option>Zamfara</option>
+                               </select>
+                               <div class="invalid-feedback">
+                                Please select a valid state.
+                              </div>
+                           </div>
+                       </div>
+   
+                       <div class="form-row">
+                           <div class="form-group col-md-6">
+                               <label for="lga"><p>Lga*</p></label>
+                               <input name="lga" type="text" class="form-control" id="lga" required>
+                           </div>
+   
+                           <div class="col-md-6">
+                               <label for="phone"><p>Phone number</p></label>
+                               <div class="input-group mb-2">
+                               <div class="input-group-prepend">
+                                   <div class="input-group-text">+234</div>
+                               </div>
+                               <input type="number" name="phone" class="form-control" maxlength="10" minlength="10" id="phone" required>
+                               </div>
+                           </div>
+                       </div>
+   
+                       <div class="form-row">
+
+                        <div class="form-group col-md-6">
+                            <label for="bvn"><p>Bvn</p></label>
+                            <input name="bvn" type="number" class="form-control" id="bvn" required>
+                        </div>
+
+                            <div class="custom-file form-group mt-3 col-md-6">
+                                <input type="file" class="custom-file-input" id="profilepic">
+                                <label class="custom-file-label" for="profilepic">Upload Picture...</label>
+                                <div class="invalid-feedback">File Required</div>
+                            </div>  
+                      
+                    </div>
+   
+                       <div class="form-row">
+                           <div class="form-group col-md-6" id="form-group-fix">
+                               <label class="my-1 mr-2" for="usertype"><p>Register as:</p></label>
+                                   <select class="custom-select form-control" name="usertype" id="usertype" required>
+                                        <option selected disabled value="">Choose...</option>
+                                       <option value="Farmer" data-toggle="tooltip" title="Register as a Farmer, you receive new and improved seeds and aids to help improve your productions." required>A Farmer</option>
+                                       <option value="Seeder" data-toggle="tooltip" title="Register as a Seed deliverer, you deliver seeds to farmers and get commissions for it." required>A Seed Deliverer</option>
+                                   </select>
+                           </div>
+
+                           <div id="popperr" pb-4 class="form-row mt-4 col-md-6 text-center">
+                            <div class="col-md">
+                                <div class="popper-button">
+                                    <div class="btn-group-toggle" data-toggle="buttons">
+                                        <label class="popper-box">
+                                            
+                                          <ha type="" checked data-tippy-content="When you register as a Farmer, you receive new improved seeds and aids to help improve your farming, note that You must have a current farm which you produce crops from to be eligible!">
+                                              <i class="fa fa-info-circle"></i> what is as a farmer?
+                                        </label>
+                                    </div>                                
+                                </div>
+                            </div>
+
+                            <div class="col-md">
+                                <div class="popper-button">
+                                    <div class="btn-group-toggle" data-toggle="buttons">
+                                        <label class="popper-box">
+                                          <ha type="" checked data-tippy-content="When you register as Seed Deliverer, your task is to deliver seeds or products to farmers in need, you get a compensation after successful delivery.">
+                                            <i class="fa fa-info-circle"></i> what is a seed deliverer?
+                                        </label>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+   
+                      
+                       </div>
+
+                    
+                       <div class="form-group col-md mt-4 text-center">
+                        <p>By clicking the “Create My Account” button, you agree to Donate A Seed's <a href="#">terms of acceptable use</a>.</p>
+                        </div>
+
+                       <div class="container h-100">
+                           <div class="row align-items-center h-100">
+                               <div class="mx-auto">
+                                   <div class="col">
+                                       <button type="submit" class="btn">Create My Account</button>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </form>
+
+              <div class="col-md text-center pt-5 pb-3">
+               <div class="col-md">
+                   <p style="color: #222;">Already have an account?<a href="login.html"> Log in</a></p>
+               </div>
+           </div>
+           </div>
+        </div>
+    </div>
+
+
+    </section>
+    <!--end register form-->
+
+    {{ render_js(render) }}
+
+
+</body>
+</body>
+
+</html>

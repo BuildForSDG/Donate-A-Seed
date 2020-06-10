@@ -5,7 +5,7 @@
         <div class="top-navigation-container container">
             <div class="top-navigation-left">
                 <div class="top-navigation-left-text">
-                    Phone : +1800-222-3333      Email : donateaseedoffcial@gmail.com </div>
+                    Phone : +1800-222-3333    |    Email : donateaseedoffcial@gmail.com </div>
             </div>
             <div class="top-navigation-right">
                 <div class="top-social-wrapper">
@@ -53,6 +53,7 @@
                     <a href="index.html">
                         <img src="{{ url_for('static', filename='icons/logo.png')}}" alt="logo" /> </a>
                 </div>
+        
                 <div class="greennature-responsive-navigation dl-menuwrapper" id="greennature-responsive-navigation">
                     <button class="dl-trigger">Open Menu</button>
                     <ul id="menu-main-menu" class="dl-menu greennature-main-mobile-menu">
@@ -63,11 +64,11 @@
 
                         <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="#contact-us" aria-current="page">Contact Us</a></li>
 
-                        <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="#" aria-current="page">Shop</a></li>
+                        <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item"><a href="shop.html" aria-current="page">Shop</a></li>
+
+                    
 
                         <li class="menu-item menu-item-home current-menu-item page_item page-item-5680 current_page_item donatelink"><a href="donate.html" aria-current="page">Donate Now</a></li>
-
-            
                     </ul>
                 </div>
             </div>
@@ -82,10 +83,11 @@
 
                         <li class="menu-item menu-item-home  greennature-normal-menu"><a href="#faq">FAQ</a></li>
 
-                        <li class="menu-item menu-item-home  greennature-normal-menu"><a href="#">Shop*</a></li>
+                        <li class="menu-item menu-item-home  greennature-normal-menu"><a href="shop.html">Shop</a></li>
+
                     </ul>
-                    <li class="greennature-donate-button"><button type="button" id="modalBtn" class="btn-donate">Donate</button>
-                    </a>                    
+                    <li href="donate.html" class="greennature-donate-button"><button onclick="location.href='donate.html'" type="button" id="modalBtn" class="btn-donate">Donate</button>
+
                 </nav>
                 <div class="greennature-navigation-gimmick" id="greennature-navigation-gimmick"></div>
                 <div class="clear"></div>
@@ -99,6 +101,11 @@
 
 {% macro render_css(render) %}
 <link rel="shortcut icon" href="{{ url_for ('static', filename='icons/favicon-1.png')}}">
+
+
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
 
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato%3A100%2C100italic%2C300%2C300italic%2Cregular%2Citalic%2C700%2C700italic%2C900%2C900italic&amp;subset=latin&amp;' type='text/css' media='all' />
 
@@ -136,9 +143,12 @@
 
 <link rel='stylesheet' href="{{ url_for ('static', filename='css/my-own.css')}}" type='text/css' media='all' />
 
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
 <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
 
 
 {% endmacro %}
@@ -154,15 +164,26 @@
                 <div class="greennature-item greennature-about-us-item greennature-normal">
                     <div class="about-us-title-wrapper">
                         <h3 class="about-us-title">ABOUT US</h3>
-                        <div class="about-us-caption greennature-title-font greennature-skin-info">what is Donate A Seed?</div>
+                        <div class="about-us-caption greennature-title-font greennature-skin-info">what is DONATE A SEED&trade;?</div>
                         <div class="about-us-title-divider"></div>
                     </div>
                     <div class="about-us-content-wrapper">
                         <div class="about-us-content greennature-skin-content">
-                            <p>An initiative / Platform led by sgd developers with a goal to seek for seeds
+                            <p>An initiative Platform led by SDG developers with a goal to seek for seeds
                                 for farmers for plantation in the aim to end zero hunger on the less privileged
-                                ones during this pandemic time and beyond. </p>
-                        </div><a class="about-us-read-more greennature-button" href="#contact-us">Learn More &raquo;</a>
+                                ones during this pandemic time and beyond. 
+                            </p>
+                            <br>
+                            <div class="about-us-caption greennature-title-font greennature-skin-info">How does it work?</div>
+                            <p>When you a register as Farmer, you will receive aids from us by providing you Good Seeds, Assistance in starting up a farm and Improving your already built business, At the end of the harvest we then take 10% of the profit made use and it to provide food for the less priviledged ones.</p>
+                            
+                            <p>One can also register as a Seed Deliverer to help deliver seeds or resources to Farmers In need of them, after Successful delivery you get a compensation.</p>
+                            <div class="about-us-caption greennature-title-font greennature-skin-info">How will we make this happen?</div>
+                            <p>Our main source of income is through Donations from kind hearted individuals who also want Hunger to end across Africa.</p>
+                            <p>For more information feel free to <a href="#contact-us">contact us</a></p>
+
+                        </div>
+                        <a class="about-us-read-more greennature-button" href="#contact-us">Learn More &raquo;</a>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -216,7 +237,7 @@
                                 <div class="greennature-ux greennature-classic-portfolio-ux">
                                     <div class="portfolio-thumbnail greennature-image"><img src="../static/images/dem-dey.jpg" alt="" width="540" height="326" /><span class="portfolio-overlay">&nbsp;</span></div>
                                     <div class="portfolio-classic-content">
-                                        <h3 class="portfolio-title"><a href="#">New Improved Seeds</a></h3>
+                                        <h3 class="portfolio-title"><a href="#">Provide New Improved Seeds</a></h3>
 
                                         <div class="portfolio-excerpt">By 2020, maintain the genetic diversity of seeds, cultivated plants and farmed and domesticated animals and their related wild species, including through soundly managed and diversified seed and plant banks at the national, regional and international levels, and promote access to and fair and equitable sharing of benefits arising from the utilization of genetic resources and associated traditional knowledge, as internationally agreed...
                                             <div class="clear"></div><a href="#" class="excerpt-read-more">Read More</a></div><a class="portfolio-classic-learn-more" href="#">Learn More</a>
@@ -273,52 +294,192 @@
     <div class="container">
         <div class="container faq p-5">
 
-            <div class="col-md-6 faq">
-                <h3>Frequently Asked Questions</h3>
+            <div class="col text-center faq">
+                <h1>Frequently Asked Questions</h1>
             </div>
 
-            <div class="row">
-                <div class="col-md-6">
-
+            <div class="col">
+                <!--general questions-->
+                <div class="col p-2">
                     <div class="accordion" id="accordionExample">
+                        <h4>General questions</h4>
 
-
+                           <!--start new--> 
                         <div class="card">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
                                     <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Who can participate:                                    </button>
+                                        Who can participate: </button>
                                 </h2>
                             </div>
 
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
                                     Everyone, Donate-A-seed is open to anyone who is willing to help donate
-                                    to farmers in combacting hunger.                                 </div>
+                                    to farmers in combacting hunger. </div>
                             </div>
                         </div>
 
-
-
+                        <!--start new-->
                         <div class="card">
                             <div class="card-header" id="headingTwo">
                                 <h2 class="mb-0">
                                     <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Why should I participate:                                    </button>
+                                        Why should I participate: </button>
                                 </h2>
                             </div>
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                 <div class="card-body">
                                     To be part of a community that will reach out to millions of less privileged
-                                    people who needs food at this time and beyond                                 </div>
+                                    people who needs food at this time and beyond </div>
+                            </div>
+                        </div>
+
+                        <!--start new-->
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                                        Is account registration required: </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Account registration at Donate-a-seed is required for both donors and farmers. This ensures a valid communication channel for all parties involved in any transactions.  </div>
+                            </div>
+                        </div>
+
+                        <!--start new-->
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        Can I invite other people: </button>
+                                </h2>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                <div class="card-body">
+                                   
+                        Yes , the greater in number we are ,the quicker the fight against hunger in won
+                         </div>
                             </div>
                         </div>
 
                     </div>
                 </div>
 
-                <div class="col-md-6 pic">
+                <!--donor questions-->
+                <div class="col p-2">
+                    <div class="accordion" id="accordionExample1">
+                        <h4>Donor</h4>
 
+                           <!--start new--> 
+                        <div class="card">
+                            <div class="card-header" id="headingFive">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                        Who can donate: </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample1">
+                                <div class="card-body">
+                                   
+                                Any registered donor, who intend to donate
+                                . </div>
+                            </div>
+                        </div>
+                        
+                        <!--start new-->
+                        <div class="card">
+                            <div class="card-header" id="headingSix">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        What are the steps to Donate: </button>
+                                </h2>
+                            </div>
+                            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample1">
+                                <div class="card-body">
+                                    To be part of a community that will reach out to millions of less privileged
+                                    people who needs food at this time and beyond </div>
+                            </div>
+                        </div>
+
+                        <!--start new-->
+                        <div class="card">
+                            <div class="card-header" id="headingSeven">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapSeven">
+                                        What do i gain: </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample1">
+                                <div class="card-body">
+                                    you will be a proud to be part of heroes ,which their name will be written in gold   </div>
+                            </div>
+                        </div>
+
+                        <!--start new-->
+                        <div class="card">
+                            <div class="card-header" id="headingEight">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                        What are the payment options: </button>
+                                </h2>
+                            </div>
+                            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample1">
+                                <div class="card-body">
+                                   
+                                    The available way to transfer funds for now is via paystack, We will add other methods in the future. This secure platform ensures timely payments and a secure environment. 
+                         </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--farmer questions-->
+                <div class="col p-2">
+                    <div class="accordion" id="accordionExample3">
+                        <h4>Farmers</h4>
+
+                           <!--start new--> 
+                        <div class="card">
+                            <div class="card-header" id="headingNine">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                                        How do I contribute as a farmer : </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample3">
+                                <div class="card-body">
+                                    You are going to ensure that every items giving to you are used accordingly. </div>
+                            </div>
+                        </div>
+
+                        <!--start new-->
+                        <div class="card">
+                            <div class="card-header" id="headingTen">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                        What do I gain as a Farmer: </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample3">
+                                <div class="card-body">
+                                You will have access to aids and seeds to improve your Farming.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div>
                 </div>
             </div>
         </div>
@@ -433,88 +594,169 @@
 {% macro render_ourteam(render) %}
 <!--our team-->
 <section id="our-team">
-    <div class="greennature-color-wrapper" style="background-color: #ffffff; ">
-        <div class="container">
-            <div class="greennature-title-item" style="margin-bottom: 40px;">
-                <div class="greennature-item-title-wrapper greennature-item  greennature-left-divider greennature-medium ">
-                    <div class="greennature-item-title-container container">
-                        <div class="greennature-item-title-head">
-                            <h3 class="greennature-item-title greennature-skin-title greennature-skin-border">Meet The Team</h3>
-                            <div class="clear"></div>
-                        </div>
-                    </div>
-                </div>
+    <div class="greennature-color-wrapper">
+        <div class="container py-5">
+            <div class="row p-3 text-center bg-white">
+              <div class="col-lg-8 mx-auto">
+                <h1 class="display-4">MEET THE TEAM</h1>
+                <p class="lead mb-0">Connect with us today, to help us win the war against hunger by 2030</p>
+              </div>
             </div>
-            <div class="clear"></div>
-            <div class="greennature-personnel-item-wrapper">
-                <div class="clear"></div>
-                <div class="four columns">
-                    <div class="greennature-item greennature-personnel-item greennature-left plain-style">
-                        <div class="greennature-ux greennature-personnel-ux">
-                            <div class="personnel-item">
-                                <div class="personnel-author-image greennature-skin-border"><img src="../static/upload/personnel-1.jpg" alt="" width="500" height="297" /></div>
-                                <div class="personnel-info">
-                                    <div class="personnel-author greennature-skin-title">Jennifer Smith</div>
-                                    <div class="personnel-position greennature-skin-info">Founder</div>
-                                </div>
-                                <div class="personnel-content greennature-skin-content">
-                                    <p>Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.</p>
-                                </div>
-                                <div class="personnel-social"><a href="http://facebook.com/" target="_self"><i class="greennature-icon fa fa-facebook" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://twitter.com/" target="_self"><i class="greennature-icon fa fa-twitter" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://linkedin.com/" target="_self"><i class="greennature-icon fa fa-linkedin" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://vimeo.com/" target="_self"><i class="greennature-icon fa fa-vimeo" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://pinterest.com/" target="_self"><i class="greennature-icon fa fa-pinterest" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a></div>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+
+          <div class="container">
+            <div class="row text-center d-flex justify-content-center ">
+              <!-- Team item -->
+              <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white team-tag rounded shadow-sm py-5 px-4">
+                  <img
+                    src="../static/images/malik.jpg"
+                    alt="pic"
+                    width="100"
+                    class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                  />
+                  <h5 class="mb-0">MALIK MUKHTAR</h5>
+                  <span class="small text-uppercase text-muted">FRONTEND DEVELOPER</span>
+                  <ul class="social mb-0 list-inline mt-3">
+                    <li class="list-inline-item">
+                      <a href="http://facebook.com/degreatbosco" class="social-link"><i class="fa fa-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="social-link"><i class="fa fa-github"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="http://linkedin.com/in/nwagbo-john" class="social-link"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                  </ul>
                 </div>
-                <div class="four columns">
-                    <div class="greennature-item greennature-personnel-item greennature-left plain-style">
-                        <div class="greennature-ux greennature-personnel-ux">
-                            <div class="personnel-item">
-                                <div class="personnel-author-image greennature-skin-border"><img src="../static/upload/personnel-3.jpg" alt="" width="500" height="297" /></div>
-                                <div class="personnel-info">
-                                    <div class="personnel-author greennature-skin-title">John Doe</div>
-                                    <div class="personnel-position greennature-skin-info">General Manager</div>
+              </div>
+              <!-- End -->
+
+                            <!-- Team item -->
+                            <div class="col-xl-3 col-sm-6 mb-5">
+                                <div class="bg-white team-tag rounded shadow-sm py-5 px-4">
+                                  <img
+                                    src="../static/images/olugbenga.jpg"
+                                    alt=""
+                                    width="100"
+                                    class="img-fluid rounded-circle mb-3 img-thumbnail  shadow-sm"
+                                  />
+                                  <h5 class="mb-0">OLUGBENGA AKEREDOLU</h5>
+                                  <span class="small text-uppercase text-muted">FULLSTACK DEVELOPER</span>
+                                  <ul class="social mb-0 list-inline mt-3">
+                                    <li class="list-inline-item">
+                                      <a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                      <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                      <a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                      <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+                                    </li>
+                                  </ul>
                                 </div>
-                                <div class="personnel-content greennature-skin-content">
-                                    <p>Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.</p>
-                                </div>
-                                <div class="personnel-social"><a href="http://facebook.com/" target="_self"><i class="greennature-icon fa fa-facebook" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://twitter.com/" target="_self"><i class="greennature-icon fa fa-twitter" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://linkedin.com/" target="_self"><i class="greennature-icon fa fa-linkedin" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://vimeo.com/" target="_self"><i class="greennature-icon fa fa-vimeo" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://pinterest.com/" target="_self"><i class="greennature-icon fa fa-pinterest" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a></div>
-                            </div>
-                        </div>
-                    </div>
+                              </div>
+                            <!-- End -->
+        
+              <!-- Team item -->
+              <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white team-tag rounded shadow-sm py-5 px-4">
+                  <img
+                    src="../static/images/johnie.jpeg"
+                    alt=""
+                    width="100"
+                    class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                  />
+                  <h5 class="mb-0">NWAGBO JOHN</h5>
+                  <span class="small text-uppercase text-muted">FRONTEND DEVELOPER</span>
+                  <ul class="social mb-0 list-inline mt-3">
+                    <li class="list-inline-item">
+                      <a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                  </ul>
                 </div>
-                <div class="four columns">
-                    <div class="greennature-item greennature-personnel-item greennature-left plain-style">
-                        <div class="greennature-ux greennature-personnel-ux">
-                            <div class="personnel-item">
-                                <div class="personnel-author-image greennature-skin-border"><img src="../static/upload/personnel-2.jpg" alt="" width="500" height="297" /></div>
-                                <div class="personnel-info">
-                                    <div class="personnel-author greennature-skin-title">Amely Chan</div>
-                                    <div class="personnel-position greennature-skin-info">Human Relation</div>
-                                </div>
-                                <div class="personnel-content greennature-skin-content">
-                                    <p>Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.</p>
-                                </div>
-                                <div class="personnel-social"><a href="http://facebook.com/" target="_self"><i class="greennature-icon fa fa-facebook" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://twitter.com/" target="_self"><i class="greennature-icon fa fa-twitter" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://linkedin.com/" target="_self"><i class="greennature-icon fa fa-linkedin" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://vimeo.com/" target="_self"><i class="greennature-icon fa fa-vimeo" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a> <a href="http://pinterest.com/" target="_self"><i class="greennature-icon fa fa-pinterest" style="vertical-align: middle; color: #999999; font-size: 19px; "></i></a></div>
-                            </div>
+              </div>
+              <!-- End -->
+        
+
+
+                       <!-- Team item -->
+                       <div class="col-xl-3 col-sm-6 mb-5">
+                        <div class="bg-white team-tag rounded shadow-sm py-5 px-4">
+                          <img
+                            src="../static/images/abimbola.jpg"
+                            alt=""
+                            width="100"
+                            class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                          />
+                          <h5 class="mb-0">ABIMBOLA OLAWALE VICTOR</h5>
+                          <span class="small text-uppercase text-muted">STATISTICIAN | DATA SCIENTIST</span>
+                          <ul class="social mb-0 list-inline mt-3">
+                            <li class="list-inline-item">
+                              <a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                          </ul>
                         </div>
-                    </div>
+                      </div>
+                    <!-- End -->
+
+                           <!-- Team item -->
+              <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white team-tag rounded shadow-sm py-5 px-4">
+                  <img
+                    src="../static/images/suleiman.jpg"
+                    alt=""
+                    width="100"
+                    class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                  />
+                  <h5 class="mb-0">KAMALDEEN SULEIMAN</h5>
+                  <span class="small text-uppercase text-muted">FRONTEND DEVELOPER</span>
+                  <ul class="social mb-0 list-inline mt-3">
+                    <li class="list-inline-item">
+                      <a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                  </ul>
                 </div>
-                <div class="clear"></div>
-                <div class="four columns">
-                    <div class="greennature-item greennature-personnel-item greennature-left plain-style">
-                        <div class="greennature-ux greennature-personnel-ux">
-                            <div class="personnel-item">
-                                <div class="personnel-author-image greennature-skin-border"></div>
-                                <div class="personnel-info"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="clear"></div>
+              </div>
+            <!-- End -->
+
+              
+              
             </div>
-            <div class="clear"></div>
-            <div class="clear"></div>
-        </div>
+          </div>
     </div>
     <div class="clear"></div>
 </section>
@@ -525,7 +767,7 @@
 
 {% macro render_sponsors(render) %}
 <!--sponsors-->
-<section id = "sponsors">
+<section id="sponsors">
     <div class="text-center mb-3">
         <div class="container border-primary rounded">
             <div class="row p-2">
@@ -585,7 +827,6 @@
 {% endmacro %}
 
 
-
 {% macro render_takeaction(render) %}
 <!--take action-->
 <section id="take-action">
@@ -602,10 +843,10 @@
                     <h2 class="stunning-item-title">The only way to make this happened is to take action!</h2>
                     <div class="stunning-item-caption greennature-skin-content">
                         <p>Let's End Hunger Together.</p>
-                    </div> 
-                        <a onclick="location.href='donate.html'" type="button" target="blank" class="stunning-item-button greennature-button large greennature-lb-payment" id="modalBtn" background-color: #ecb338; color: #ffffff;>Donate Now!</a>
-                        <a onclick="location.href='registerfarmer.html'" type="button" target="blank" class="stunning-item-button greennature-button large greennature-lb-payment" id="modalBtn" style="background-color: #ecb338 !important; color: #ffffff;">Register!</a>
                     </div>
+                    <a onclick="location.href='donate.html'" type="button" target="_blank" class="stunning-item-button greennature-button large greennature-lb-payment" id="modalBtn" background-color: #ecb338; color: #ffffff;>Donate Now!</a>
+                    <a onclick="location.href='register.html'" type="button" target="_blank" class="stunning-item-button greennature-button large greennature-lb-payment" id="modalBtn" style="background-color: #ecb338 !important; color: #ffffff;">Register!</a>
+                </div>
             </div>
             <div class="clear"></div>
             <div class="clear"></div>
@@ -735,13 +976,13 @@
 <!-- JS, Popper.js, and jQuery -->
 <!--counter script-->
 <script>
-    jQuery(document).ready(function( $ )
-    {
+    jQuery(document).ready(function($) {
         $('.counter').counterUp({
-        delay: 10,
-        time: 1000
+            delay: 10,
+            time: 1000
         });
     });
+
 </script>
 <script type='text/javascript' src='../static/js/jquery.counterup.min.js'></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
@@ -752,11 +993,16 @@
 <script>
     var ms_grabbing_curosr = '../static/plugins/masterslider/public/assets/css/common/grabbing.html',
         ms_grab_curosr = '../static/plugins/masterslider/public/assets/css/common/grab.html';
+
 </script>
+
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script type='text/javascript' src='../static/js/popper.js'></script>
 <script type='text/javascript' src='../static/js/scrolltotop.js'></script>
+<script type='text/javascript' src='../static/js/main.js'></script>
 <script type='text/javascript' src='../static/js/navsec.js'></script>
 <script type='text/javascript' src='../static/plugins/superfish/js/superfish.js'></script>
-<script type='text/javascript' src='../static/js/donate-modal.js'></script>
 <script type='text/javascript' src='../static/js/hoverIntent.min.js'></script>
 <script type='text/javascript' src='../static/plugins/dl-menu/modernizr.custom.js'></script>
 <script type='text/javascript' src='../static/plugins/dl-menu/jquery.dlmenu.js'></script>
@@ -838,375 +1084,19 @@
     })(jQuery);
 
 </script>
+<script>
+$(function () {
+$('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+<!-- Production -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+
 
 {% endmacro %}
 
-{% macro render_formfarmer(render) %}
-<!--form farmer-->
-<section id="register">
-    <div class="cotainer p-4">
-        <div class="container p-5">
-            <div class="col-md-6 h3r">
-                <h3>Are you interested in our program? Register As A Farmer Below</h3>
-            </div>
-            <form method="POST" action="{{ url_for('auth.registerfarmer') }}">
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="firstnamefarmer">First Name</label>
-                        <input name="firstname" type="text" class="form-control" id="firstname" required>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="lastname">Last Name</label>
-                        <input name="lastname" type="text" class="form-control" id="lastname" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input name="email" type="email" class="form-control" id="email" required>
-                    <small id="emailhelp" class="form-text text-muted">
-                        We will never share your Email...
-                    </small>
-                </div>
-
-                <!--div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="username">Username</label>
-                        <input name="username" type="text" class="form-control" id="username" required>
-                    </div>
-
-                    <div class="form-group col-md-6">
-
-                        <label for="password">Password</label>
-                        <input name="password" type="password" id="password" class="form-control" aria-describedby="passwordHelpBlock">
-                        <small id="passwordHelpBlock" class="form-text text-muted">
-                            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-                        </small>
-                    </div>
-                </div-->
-
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="address">Address</label>
-                        <input name="address" type="" class="form-control" id="address" required>
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="state">State</label>
-                        <select name="state" id="state" class="form-control" required>
-                            <option selected>Choose...</option>
-                            <option>Abia</option>
-                            <option>Adamawa</option>
-                            <option>Akwa Ibom</option>
-                            <option>Anambra</option>
-                            <option>Bauchi</option>
-                            <option>Bayelsa</option>
-                            <option>Benue</option>
-                            <option>Borno</option>
-                            <option>Cross River</option>
-                            <option>Delta</option>
-                            <option>Ebonyi</option>
-                            <option>Edo</option>
-                            <option>Ekiti</option>
-                            <option>Enugu</option>
-                            <option>FCT Abuja</option>
-                            <option>Gombe</option>
-                            <option>Imo</option>
-                            <option>Jigawa</option>
-                            <option>Kaduna</option>
-                            <option>Kano</option>
-                            <option>Katsina</option>
-                            <option>Kebbi</option>
-                            <option>Kogi</option>
-                            <option>Kwara</option>
-                            <option>Lagos</option>
-                            <option>Nasarawa</option>
-                            <option>Niger</option>
-                            <option>Ogun</option>
-                            <option>Ondo</option>
-                            <option>Osun</option>
-                            <option>Oyo</option>
-                            <option>Plateau</option>
-                            <option>Rivers</option>
-                            <option>Sokoto</option>
-                            <option>Taraba</option>
-                            <option>Yobe</option>
-                            <option>Zamfara</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="lga">LGA</label>
-                        <input name="lga" type="text" class="form-control" id="lga" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="address">Phone Number</label>
-                        <input name="phone" type="number" class="form-control" id="phone">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="bvn">BVN</label>
-                        <input name="bvn" type="number" class="form-control" id="bvn">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="upload">Upload Image</label>
-                        <input type="file" class="form-control-file" id="upload">
-                    </div>
-                </div>
-
-                <div class="form-group col-md-3">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="agree">
-                        <label class="form-check-label" for="agree">
-                            Agree to our terms and conditions
-                        </label>
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <button type="submit" class="btn btn-primary">Submit Application</button>
-                    </div>
-                      <div class="col-md-6">
-                          <br>
-                      </div>
-                      <div class="col-md-6">
-                          <p class="not-a">Not a Farmer? sign up as a <a href="registerseed.html">Seed Deliverer</a> instead</p>
-                      </div>
-                    </div>
-                </div>            
-            </form>
-        </div>
-    </div>
-</section>
-<!--end form-->
-{% endmacro %}
-
-{% macro render_formseed(render) %}
-<!--form farmer-->
-<section id="register">
-    <div class="cotainer p-4">
-        <div class="container p-5">
-            <div class="col-md-6 h3r">
-                <h3>Are you interested in our program? Register As A Seed Deliverer Below</h3>
-            </div>
-            <form method="POST" action="{{ url_for('auth.registerseed') }}">
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="firstnamefarmer">First Name</label>
-                        <input name="firstname" type="text" class="form-control" id="firstname" required>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="lastname">Last Name</label>
-                        <input name="lastname" type="text" class="form-control" id="lastname" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input name="email" type="email" class="form-control" id="email" required>
-                    <small id="emailhelp" class="form-text text-muted">
-                        We will never share your Email...
-                    </small>
-                </div>
-
-                <!--div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="username">Username</label>
-                        <input name="username" type="text" class="form-control" id="username" required>
-                    </div>
-
-                    <div class="form-group col-md-6">
-
-                        <label for="password">Password</label>
-                        <input name="password" type="password" id="password" class="form-control" aria-describedby="passwordHelpBlock">
-                        <small id="passwordHelpBlock" class="form-text text-muted">
-                            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-                        </small>
-                    </div>
-                </div-->
-
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="address">Address</label>
-                        <input name="address" type="" class="form-control" id="address" required>
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="state">State</label>
-                        <select name="state" id="state" class="form-control" required>
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                            <option>Abia</option>
-                            <option>Adamawa</option>
-                            <option>Akwa Ibom</option>
-                            <option>Anambra</option>
-                            <option>Bauchi</option>
-                            <option>Bayelsa</option>
-                            <option>Benue</option>
-                            <option>Borno</option>
-                            <option>Cross River</option>
-                            <option>Delta</option>
-                            <option>Ebonyi</option>
-                            <option>Edo</option>
-                            <option>Ekiti</option>
-                            <option>Enugu</option>
-                            <option>FCT Abuja</option>
-                            <option>Gombe</option>
-                            <option>Imo</option>
-                            <option>Jigawa</option>
-                            <option>Kaduna</option>
-                            <option>Kano</option>
-                            <option>Katsina</option>
-                            <option>Kebbi</option>
-                            <option>Kogi</option>
-                            <option>Kwara</option>
-                            <option>Lagos</option>
-                            <option>Nasarawa</option>
-                            <option>Niger</option>
-                            <option>Ogun</option>
-                            <option>Ondo</option>
-                            <option>Osun</option>
-                            <option>Oyo</option>
-                            <option>Plateau</option>
-                            <option>Rivers</option>
-                            <option>Sokoto</option>
-                            <option>Taraba</option>
-                            <option>Yobe</option>
-                            <option>Zamfara</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="lga">LGA</label>
-                        <input name="lga" type="text" class="form-control" id="lga" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="address">Phone Number</label>
-                        <input name="phone" type="number" class="form-control" id="phone">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="bvn">BVN</label>
-                        <input name="bvn" type="number" class="form-control" id="bvn">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="upload">Upload Image</label>
-                        <input type="file" class="form-control-file" id="upload">
-                    </div>
-                </div>
-
-                <div class="form-group col-md-3">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="agree">
-                        <label class="form-check-label" for="agree">
-                            Agree to terms and conditions
-                        </label>
-                    </div>
-                </div>
 
 
-                <div class="container">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <button type="submit" class="btn btn-primary">Submit Application</button>
-                    </div>
-                      <div class="col-md-6">
-                          <br>
-                      </div>
-                      <div class="col-md-6">
-                          <p class="not-a">Not a Seed Deliverer? sign up as a <a href="registerfarmer.html">Farmer instead</a></p>
-                      </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-<!--end form-->
-{% endmacro %}
 
-{% macro render_donatemodal(render) %}
-<!--donate popup-->
-<section id="donate-popup">
-    <div id="simpleModal" class="modal1">
-        <div class="modal1-content">
-            <div class="modal-header">
-                <h3>Your Help Means A Lot To Us.</h3>
-                <span class="closeBtn">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="cotainer p-4">
-                    <div class="container p-1">
-                        <form method="POST" action="">
-                            <div class="form-group">
-                                <label for="donate-amount"><b>How much would you like to donate?</b></label>
-                                <div class="container">
-                                    <div class="form-row">
-                                        <div class="btn-group btn-group-toggle col-md-6 mb-3" data-toggle="buttons">
-                                            <label class="btn btn-primary col-md-6 mb-3">
-                                              <input type="radio" name="options" id="option1"> #1000
-                                            </label>
-                                            <label class="btn btn-primary col-md-6 mb-3">
-                                              <input type="radio" name="options" id="option2"> #50,000
-                                            </label>
-                                            
-                                          </div>
-                                    </div>
-                                </div>
-                                <input type="number" class="form-control" id="donate-amount" placeholder="amount in (Naira)" required>
-                              </div>
-
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="firstnamefarmer">First Name*</label>
-                                    <input name="firstname" type="text" class="form-control" id="firstname" required>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="lastname">Last Name*</label>
-                                    <input name="lastname" type="text" class="form-control" id="lastname" required>
-                                </div>
-                            </div>
-            
-                            <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="email">Email Address*</label>
-                                <input name="email" type="email" class="form-control" id="email" required>
-                                <small id="emailhelp" class="form-text text-muted">
-                                    We will never share your Email...
-                                </small>
-                            </div>
-
-                            <div class="form-group col-md-6">
-                                <label for="address">Phone Number</label>
-                                <input name="phone" type="number" class="form-control" id="phone">
-                            </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Additional Notes</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="note: this will appear on our home page"></textarea>
-                              </div>
-            
-    
-                            <button type="submit" class="btn btn-primary">Donate Now</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</section>
-<!--end popup-->
-{% endmacro%}
